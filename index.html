@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehak | Portfolio</title>
+  <meta
+    name="description"
+    content="Portfolio of Mehak, a UX designer focused on trustworthy AI experiences and design systems."
+  >
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    const topUrl = `${window.location.pathname}${window.location.search}`;
+    if (window.location.hash) {
+      history.replaceState(null, "", topUrl);
+    }
+
+    window.scrollTo(0, 0);
+    window.addEventListener("pageshow", () => window.scrollTo(0, 0));
+  </script>
+  <link rel="stylesheet" href="styles.css?v=1782818431">
+  <link rel="stylesheet" href="chat.css?v=1782818431">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="back-to-top" id="back-to-top" href="#top" aria-label="Back to top">Back to top &raquo;</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-row">
+      <a class="brand" href="#top">Mehak Sharma</a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about-text">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section about-section" id="about">
+      <div class="container about-grid reveal">
+        <div class="about-hero">
+          <div class="about-main">
+            <h2 class="about-headline">Lead designer building AI products that ship.</h2>
+            <p class="about-sub">Ten years of design craft + taste + vibe coding fluency to bring ideas to life.</p>
+          </div>
+          <figure class="about-media">
+            <img
+              class="about-photo"
+              src="mehak-profile.png"
+              alt="Portrait of Mehak Sharma"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </figure>
+        </div>
+
+        <div class="about-facts">
+          <div class="fact">
+            <span class="fact-value">Product Designer,</span>
+            <span class="fact-value">Outlook + AI Systems</span>
+          </div>
+          <div class="fact">
+            <span class="fact-value">Previously @</span>
+            <span class="fact-value">Agoda (BKNG)</span>
+          </div>
+          <div class="fact">
+            <span class="fact-value">Based in</span>
+            <span class="fact-value">Shanghai</span>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-reminder" href="#background" aria-label="Scroll to continue">
+        <span>Scroll</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section class="section background-section" id="background">
+      <div class="container background-wrap reveal" id="about-text">
+        <p class="background-copy">
+          Hey, I'm Mehak.
+          <br>
+          <br>
+          I design AI experiences inside <span class="company-name">Microsoft Outlook</span>, currently designing and vibe-coding
+          Summarize and AI features built to help people cut through inbox noise. Before this, I designed
+          <span class="company-name">Agoda</span>'s loyalty program to drive deeper app engagement, and at <span class="company-name">SAP</span>,
+          built B2B tools spanning project management and data privacy, helping users manage their time and control their data.
+          Based in Shanghai.
+        </p>
+      </div>
+    </section>
+
+    <section class="project-reveal" id="work">
+      <div class="project-cover">
+        <div class="container">
+          <h2 class="cover-title">Designing AI-powered Outlook experiences that help users do more</h2>
+        </div>
+      </div>
+
+      <div class="project-page">
+        <div class="container">
+          <p class="project-kicker">Microsoft, 2024-26</p>
+          <h2 class="project-name">Summarize experience in Outlook Mobile</h2>
+
+          <div class="project-overview reveal">
+            <p class="overview-term">Overview</p>
+            <div class="overview-body">
+              <p class="overview-desc">
+                Summarize is one of the strongest Copilot features inside Microsoft Outlook, with
+                over 2.3 million users who have tried it on iOS alone. I joined as the first
+                principles designer in August 2024 and owned the feature end-to-end - from
+                introducing AI to Outlook mobile users for the first time, to integrating it into
+                Copilot Chat, to currently prototyping the next evolution of how AI surfaces inside
+                the inbox.
+              </p>
+              <p class="overview-release">Market: Global &nbsp;|&nbsp; Platform: Outlook Mobile &nbsp;|&nbsp; Release: 2024-Present</p>
+            </div>
+          </div>
+
+          <div class="project-overview reveal">
+            <p class="overview-term">My role</p>
+            <div class="overview-body">
+              <p class="overview-desc">
+                Lead designer across all phases of Summarize. Beyond design, I contributed to
+                prompt engineering, ran experiments, and tracked daily usage to refine the AI output
+                quality. In Phase 3, I experimented with vibe-coded design flows and prototyping -
+                bringing the vision to life beyond just mockups.
+              </p>
+            </div>
+          </div>
+
+          <div class="project-overview reveal">
+            <p class="overview-term">Journey</p>
+            <div class="overview-body">
+              <p class="overview-desc">
+                <strong>Three phases. One evolving vision.</strong><br>
+                I've been part of the Summarize journey since AI capabilities were introduced into
+                Outlook mobile for the first time, then integrated Summarize into Copilot Chat for
+                deeper, multi-turn interactions. Currently, I am reimagining Summarize as a proactive
+                action system - surfacing above the inbox before users even start reading.
+              </p>
+            </div>
+          </div>
+
+          <figure class="project-mockup placeholder reveal">
+            Add project screens here
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-reveal" id="work-2">
+      <div class="project-cover">
+        <div class="container">
+          <h2 class="cover-title">Project Two</h2>
+        </div>
+      </div>
+
+      <div class="project-page">
+        <div class="container">
+          <p class="project-kicker">Project Two</p>
+          <h2 class="project-name">Project title coming soon</h2>
+
+          <div class="project-overview reveal">
+            <p class="overview-term">Overview</p>
+            <div class="overview-body">
+              <p class="overview-desc">
+                Placeholder overview. Details for this project will be added later.
+              </p>
+              <p class="overview-release">Market: TBD &nbsp;|&nbsp; Platform: TBD &nbsp;|&nbsp; Release: TBD</p>
+            </div>
+          </div>
+
+          <div class="project-overview reveal">
+            <p class="overview-term">My role</p>
+            <div class="overview-body">
+              <p class="overview-desc">
+                Placeholder role description. To be filled in.
+              </p>
+            </div>
+          </div>
+
+          <figure class="project-mockup placeholder reveal">
+            Add project screens here
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work-legacy" hidden>
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Case studies focused on measurable product outcomes</h2>
+        </div>
+
+        <div class="card-grid reveal-stagger">
+          <article class="card">
+            <p class="meta">Google DeepMind · 2025</p>
+            <h3>Trust calibration in AI recommendations</h3>
+            <p>
+              Designed a confidence anatomy pattern that made model outputs easier to evaluate in high-stakes
+              workflows.
+            </p>
+            <ul>
+              <li>Contextual inquiry and diary study with 24 participants</li>
+              <li>Reduced inappropriate overrides by 34% in A/B tests</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <p class="meta">Microsoft · 2024</p>
+            <h3>AI-native design system extension</h3>
+            <p>
+              Expanded an existing component library to support streaming states, uncertainty handling, and
+              recovery flows.
+            </p>
+            <ul>
+              <li>Audited 340 components across 4 product surfaces</li>
+              <li>Adopted by 6 product teams in first quarter</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <p class="meta">Internal R&amp;D · 2024</p>
+            <h3>Explainability for non-ML audiences</h3>
+            <p>
+              Reframed technical model behavior into human-readable decision cues for product and support teams.
+            </p>
+            <ul>
+              <li>Created reusable evidence and confidence UI blocks</li>
+              <li>Improved task confidence in usability studies</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="philosophy" id="approach">
+      <div class="philosophy-sticky">
+        <div class="container">
+          <p class="philosophy-title">How I work</p>
+          <div class="philosophy-grid">
+            <article class="phil-item" style="--i: 0">
+              <h3>Research with intent</h3>
+              <p>Use contextual methods to uncover decision-making moments, not just user preferences.</p>
+            </article>
+            <article class="phil-item" style="--i: 1">
+              <h3>Design systems as leverage</h3>
+              <p>Translate findings into reusable components, tokens, and patterns that scale across teams.</p>
+            </article>
+            <article class="phil-item" style="--i: 2">
+              <h3>Narrative-driven delivery</h3>
+              <p>Align teams through clear rationale, measurable outcomes, and implementation-ready artifacts.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="contact">
+      <div class="container contact-card reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Open to senior UX and design strategy opportunities</h2>
+        <p>Based in Shanghai, collaborating globally across product organizations.</p>
+        <div class="contact-links">
+          <a class="btn contact-btn" href="mailto:meksharma@gmail.com">Email</a>
+          <a class="btn contact-btn" href="https://www.linkedin.com/in/meksharma/" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Mehak. Vibe coded with intention.</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=1782818431"></script>
+  <script src="chat.js?v=1782818431"></script>
+</body>
+</html>
