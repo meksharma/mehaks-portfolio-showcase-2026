@@ -13,59 +13,105 @@
   // Each entry has keywords to match and a scripted answer.
   const KB = [
     {
-      keys: ["who", "about", "yourself", "tell me", "intro", "you"],
+      keys: ["who is mehak", "about mehak", "introduce mehak", "background"],
       answer:
-        "I'm Mehak — a lead product designer with ten years of craft, taste, and vibe-coding fluency. Right now I design AI experiences inside Microsoft Outlook, and I'm based in Shanghai.",
+        "Mehak Sharma is a Senior Product Designer with 10+ years of experience across consumer apps, B2B platforms, and AI products. She is based in Shanghai and currently designs AI and Copilot experiences for Outlook Mobile at Microsoft. She is known for thinking in systems, owning work end to end, and building working prototypes to prove a design vision.",
     },
     {
-      keys: ["outlook", "summarize", "ai", "copilot", "microsoft"],
+      keys: ["microsoft", "outlook", "summarize", "copilot", "reading pane", "file previewer"],
       answer:
-        "At Microsoft I own the **Summarize** experience in Outlook Mobile — one of Copilot's strongest features, with 2.3M+ users on iOS alone. I joined as the first principal designer in Aug 2024 and have driven it end-to-end: introducing AI to Outlook mobile for the first time, integrating it into Copilot Chat, and now prototyping how AI proactively surfaces above the inbox.",
+        "At Microsoft, Mehak started on Teams Mobile in April 2022, focusing on search functionality and behavior. She later moved to Outlook, where she leads **Copilot Summarize** and also works on the reading pane, file previewer, and other core experiences. Summarize has reached more than 2.3 million users on iOS.",
     },
     {
-      keys: ["agoda", "booking", "loyalty", "travel"],
+      keys: ["ai design", "ai ux", "approach ai", "designing ai", "prompt engineering", "experiments"],
       answer:
-        "Before Microsoft I designed Agoda's loyalty program (part of Booking Holdings) to drive deeper app engagement.",
+        "Mehak approaches AI design from first principles: define the interaction model, test assumptions, and make the behavior tangible before polishing the UI. On Copilot Summarize, she also contributes to prompt engineering, runs experiments, and tracks daily usage to improve output quality. She treats the model behavior and the interface as one product experience.",
     },
     {
-      keys: ["sap", "b2b", "enterprise", "privacy"],
+      keys: ["vibe coding", "vibe", "prototype", "prototyping", "working prototype", "build it"],
       answer:
-        "At SAP I built B2B tools spanning project management and data privacy — helping users manage their time and control their data.",
+        "For Mehak, vibe coding is an integral design tool: a way to turn a direction into something stakeholders can actually use. For the next evolution of Summarize, she built a working prototype connected to real M365 data. That made the vision concrete and helped the team evaluate an AI experience more effectively than static mockups or a presentation deck could.",
     },
     {
-      keys: ["work", "process", "how do you", "approach", "philosophy", "method"],
+      keys: ["design process", "how does mehak work", "how she works", "approach", "process", "philosophy"],
       answer:
-        "Three principles guide how I work:\n\n**Research with intent** — uncover decision-making moments, not just preferences.\n**Design systems as leverage** — turn findings into reusable patterns that scale.\n**Narrative-driven delivery** — align teams through clear rationale and measurable outcomes.",
+        "Three principles define Mehak's process:\n\n**Think in systems, not screens** — challenge assumptions and make sure the team is solving the right problem.\n\n**Accountability doesn't end at handoff** — stay close through engineering, launch, measurement, and iteration.\n\n**Make the vision tangible** — build working prototypes to align teams and prove that a direction works.",
     },
     {
-      keys: ["vibe", "coding", "prototype", "code", "build", "prototyping"],
+      keys: ["career", "timeline", "experience", "previously", "companies", "work history"],
       answer:
-        "I vibe-code my prototypes — bringing a vision to life beyond static mockups. On Summarize Phase 3 I experimented with vibe-coded design flows, prompt engineering, ran experiments, and tracked daily usage to refine AI output quality.",
+        "Mehak's career spans four product environments: **Samsung** in Bangalore (2015–2016), where she worked on the first My Galaxy app; **SAP** (2016–2019), designing B2B products across data privacy, project management, and warehouse management; **Agoda** (2019–2022), working on loyalty and its property platform; and **Microsoft** (2022–present), designing Teams Mobile and Outlook AI experiences.",
     },
     {
-      keys: ["location", "where", "based", "shanghai", "live"],
-      answer: "I'm based in Shanghai, collaborating globally across product organizations.",
+      keys: ["agoda", "booking", "loyalty", "property", "properties", "hotel"],
+      answer:
+        "At Agoda, Mehak worked across two major areas from July 2019 to April 2022. She designed loyalty and growth experiences that helped travelers understand and engage with rewards, and a 360-degree B2B platform for properties covering onboarding, settings, rates, and how those choices appeared in the consumer app.",
     },
     {
-      keys: ["contact", "hire", "email", "reach", "linkedin", "available", "opportunit"],
+      keys: ["sap", "enterprise", "data privacy", "warehouse", "project management", "germany"],
       answer:
-        "I'm open to senior UX and design strategy opportunities. You can reach me at **meksharma@gmail.com** or on LinkedIn (/in/meksharma).",
+        "At SAP, Mehak was a UX Experience Design Specialist working across data privacy, project management, and warehouse management. She partnered directly with the German team and spent time in Germany conducting user research to identify product gaps.",
     },
     {
-      keys: ["experience", "years", "long", "career"],
+      keys: ["samsung", "my galaxy", "bangalore"],
       answer:
-        "Ten years across AI, consumer, and enterprise — Microsoft (Outlook + AI), Agoda (BKNG), and SAP.",
+        "Mehak began her product design career at Samsung in Bangalore, where she worked on the first version of My Galaxy from 2015 to 2016. It was an all-in-one app connecting Samsung device owners with entertainment, offers, and services.",
+    },
+    {
+      keys: ["skill", "specialise", "specialize", "strength", "tools", "figma", "cursor"],
+      answer:
+        "Mehak specialises in AI/UX design, vibe coding, prompt engineering, research methods, design experimentation, mobile-first design, and both B2B and consumer products. She also has extensive experience aligning cross-cultural teams across Germany, China, and the US. Her toolkit includes Figma, Cursor, and a range of M365 and AI tools.",
+    },
+    {
+      keys: ["surprising", "personal", "outside work", "hobby", "diving", "diver", "pets", "dogs", "yuzu", "mochi"],
+      answer:
+        "Something surprising: Mehak is a PADI-certified advanced diver. She also has two dogs, Yuzu, an Australian Shepherd, and Mochi, a Shiba Inu. Outside work, she enjoys morning walks, swimming, diving, and traveling across Southeast Asia.",
+    },
+    {
+      keys: ["location", "where", "based", "shanghai", "china", "relocation"],
+      answer:
+        "Mehak is currently based in Shanghai, China. She has lived and worked across Bangalore, Thailand, and China, and she is open to relocating for the right design leadership opportunity.",
+    },
+    {
+      keys: ["contact", "hire", "email", "reach", "linkedin", "available", "opportunit", "new role", "leadership role"],
+      answer:
+        "Mehak is open to design leadership roles globally, including opportunities that involve relocation. Interested in starting a conversation? Reach her at **meksharma@gmail.com** or through LinkedIn at **linkedin.com/in/meksharma**.",
     },
   ];
 
   const FALLBACK =
-    "Great question! I'm a simulated version of Mehak's assistant, so I know about her work at Microsoft Outlook, Agoda and SAP, how she works, and how to get in touch. Try asking about the Summarize project, her design process, or how to reach her.";
+    "I'm pretty focused — I know Mehak's work inside out, but not much else. Try asking me about her projects, her design process, or what it's like working on AI at Microsoft.";
 
   const SUGGESTIONS = [
-    "Who is Mehak?",
-    "Tell me about the Summarize project",
-    "How does she work?",
-    "How can I reach her?",
+    "What has Mehak worked on at Microsoft?",
+    "How does Mehak approach AI design?",
+    "What is vibe coding and how does Mehak use it?",
+    "What's Mehak's design process?",
+    "Is Mehak open to new opportunities?",
+    "Tell me something surprising about Mehak",
+  ];
+
+  const FOLLOW_UP_ROUNDS = [
+    [
+      "How does Mehak approach AI design?",
+      "What is vibe coding and how does Mehak use it?",
+      "What's Mehak's design process?",
+    ],
+    [
+      "What did Mehak work on before Microsoft?",
+      "What are Mehak's strongest skills?",
+      "Tell me about Mehak's work at Agoda",
+    ],
+    [
+      "Tell me something surprising about Mehak",
+      "Is Mehak open to new opportunities?",
+      "Where is Mehak based?",
+    ],
+    [
+      "What has Mehak worked on at Microsoft?",
+      "How did Mehak design Copilot Summarize?",
+      "How can I contact Mehak?",
+    ],
   ];
 
   function generateResponse(text) {
@@ -101,13 +147,17 @@
   launcher.className = "chat-launcher";
   launcher.innerHTML = `
     <form class="chat-launcher-form" autocomplete="off">
-      <span class="chat-launcher-spark" aria-hidden="true">
+      <button class="chat-launcher-spark" type="button" aria-label="Open chat input" aria-expanded="false" aria-controls="chat-launcher-input">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2.5l1.6 4.9a5 5 0 0 0 3 3L21.5 12l-4.9 1.6a5 5 0 0 0-3 3L12 21.5l-1.6-4.9a5 5 0 0 0-3-3L2.5 12l4.9-1.6a5 5 0 0 0 3-3L12 2.5z"/>
         </svg>
-      </span>
-      <input class="chat-launcher-input" type="text" placeholder="Ask me something…" aria-label="Ask the assistant" />
-      <button class="chat-send chat-launcher-send" type="submit" aria-label="Send">↑</button>
+      </button>
+      <input class="chat-launcher-input" id="chat-launcher-input" type="text" placeholder="Ask me something…" aria-label="Ask the assistant" />
+      <button class="chat-send chat-launcher-send" type="submit" aria-label="Send">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </button>
     </form>`;
   document.body.appendChild(launcher);
 
@@ -119,22 +169,45 @@
     <div class="chat-panel-head">
       <div>
         <p class="chat-panel-title">Chat with Mehak</p>
-        <p class="chat-panel-sub">Simulated assistant · demo</p>
+        <p class="chat-panel-sub">Portfolio assistant</p>
       </div>
       <button class="chat-close" aria-label="Close chat">×</button>
     </div>
     <div class="chat-log" aria-live="polite">
-      <p class="chat-welcome">👋 Hi! I'm a simulated version of <strong>Mehak's</strong> assistant. Ask me about her work, design process, or how to get in touch.</p>
+      <p class="chat-welcome">Hi! I know <strong>Mehak's</strong> work, design process, and career. What would you like to know?</p>
     </div>
     <div class="chat-suggestions"></div>
     <form class="chat-composer" autocomplete="off">
       <input type="text" placeholder="Ask me something…" aria-label="Type your message" />
-      <button class="chat-send" type="submit" aria-label="Send">↑</button>
+      <button class="chat-send" type="submit" aria-label="Send">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </button>
     </form>`;
   document.body.appendChild(panel);
 
   const launcherForm = launcher.querySelector(".chat-launcher-form");
+  const launcherSpark = launcher.querySelector(".chat-launcher-spark");
   const launcherInput = launcher.querySelector(".chat-launcher-input");
+  const mobileLauncherQuery = window.matchMedia("(max-width: 760px)");
+
+  const setLauncherExpanded = (expanded) => {
+    if (!mobileLauncherQuery.matches) return;
+    launcher.classList.toggle("is-expanded", expanded);
+    launcherSpark.setAttribute("aria-expanded", String(expanded));
+    launcherSpark.setAttribute("aria-label", expanded ? "Collapse chat input" : "Open chat input");
+    if (expanded) setTimeout(() => launcherInput.focus(), 180);
+  };
+
+  launcherSpark.addEventListener("click", () => {
+    if (mobileLauncherQuery.matches) {
+      setLauncherExpanded(!launcher.classList.contains("is-expanded"));
+    } else {
+      launcherInput.focus();
+    }
+  });
+
   launcherInput.addEventListener("input", () => {
     launcherForm.classList.toggle("has-text", launcherInput.value.trim().length > 0);
   });
@@ -145,28 +218,41 @@
   const composerInput = composer.querySelector("input");
 
   let isStreaming = false;
+  let suggestionRound = 0;
 
-  // Suggested question chips
-  SUGGESTIONS.forEach((s) => {
-    const chip = document.createElement("button");
-    chip.type = "button";
-    chip.className = "chat-chip";
-    chip.textContent = s;
-    chip.addEventListener("click", () => {
-      suggestionsWrap.style.display = "none";
-      submit(s);
+  function renderSuggestions(suggestions) {
+    suggestionsWrap.replaceChildren();
+    suggestions.forEach((suggestion) => {
+      const chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "chat-chip";
+      chip.textContent = suggestion;
+      chip.addEventListener("click", () => {
+        suggestionsWrap.style.display = "none";
+        submit(suggestion);
+      });
+      suggestionsWrap.appendChild(chip);
     });
-    suggestionsWrap.appendChild(chip);
-  });
+    suggestionsWrap.style.display = "flex";
+  }
+
+  function showNextSuggestions() {
+    renderSuggestions(FOLLOW_UP_ROUNDS[suggestionRound % FOLLOW_UP_ROUNDS.length]);
+    suggestionRound++;
+  }
+
+  renderSuggestions(SUGGESTIONS);
 
   function openPanel() {
     panel.classList.add("is-open");
+    setLauncherExpanded(false);
     launcher.classList.add("is-hidden");
     setTimeout(() => composerInput.focus(), 120);
   }
 
   function closePanel() {
     panel.classList.remove("is-open");
+    setLauncherExpanded(false);
     launcher.classList.remove("is-hidden");
   }
 
@@ -230,6 +316,8 @@
     const answer = generateResponse(message);
     await streamInto(answer);
     isStreaming = false;
+    showNextSuggestions();
+    scrollLog();
     composerInput.focus();
   }
 
@@ -252,6 +340,26 @@
   closeBtn.addEventListener("click", closePanel);
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && panel.classList.contains("is-open")) closePanel();
+    if (e.key !== "Escape") return;
+    if (panel.classList.contains("is-open")) {
+      closePanel();
+    } else if (launcher.classList.contains("is-expanded")) {
+      setLauncherExpanded(false);
+      launcherSpark.focus();
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (launcher.classList.contains("is-expanded") && !launcher.contains(e.target)) {
+      setLauncherExpanded(false);
+    }
+  });
+
+  mobileLauncherQuery.addEventListener("change", (e) => {
+    if (!e.matches) {
+      launcher.classList.remove("is-expanded");
+      launcherSpark.setAttribute("aria-expanded", "false");
+      launcherSpark.setAttribute("aria-label", "Open chat input");
+    }
   });
 })();

@@ -3,6 +3,8 @@
 A personal portfolio website for Mehak Sharma, a product designer focused on
 trustworthy AI experiences, design systems, and thoughtful interaction design.
 
+**[View the portfolio website](https://meksharma.github.io/mehaks-portfolio-showcase-2026/)**
+
 ## Portfolio Preview
 
 This repository contains the portfolio experience currently in development. It
@@ -25,6 +27,3 @@ product design work in a responsive, interactive website.
 
 Open `index.html` in a browser to view the portfolio. No build step or external
 dependencies are required.
-
-The public portfolio is still in development. GitHub Pages is currently
-disabled for this repository.

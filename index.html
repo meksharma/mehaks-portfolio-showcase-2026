@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mehak | Portfolio</title>
+  <title>Mehak’s Portfolio Showcase 2026</title>
   <meta
     name="description"
     content="Portfolio of Mehak, a UX designer focused on trustworthy AI experiences and design systems."
@@ -22,7 +22,7 @@
     window.addEventListener("pageshow", () => window.scrollTo(0, 0));
   </script>
   <link rel="stylesheet" href="styles.css?v=1782818431">
-  <link rel="stylesheet" href="chat.css?v=1782818431">
+  <link rel="stylesheet" href="chat.css?v=2026090703">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -36,10 +36,16 @@
         class="menu-toggle"
         id="menu-toggle"
         type="button"
+        aria-label="Open navigation menu"
         aria-expanded="false"
         aria-controls="site-nav"
       >
-        Menu
+        <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="Primary">
@@ -72,9 +78,18 @@
           </div>
           <figure class="about-media">
             <img
-              class="about-photo"
-              src="mehak-profile.png"
+              class="about-photo about-photo-bw"
+              src="BW photo Mehak.png"
               alt="Portrait of Mehak Sharma"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            >
+            <img
+              class="about-photo about-photo-color"
+              src="Mehak Sharma Portfolio image 2.png"
+              alt=""
+              aria-hidden="true"
               loading="eager"
               decoding="async"
               fetchpriority="high"
@@ -270,16 +285,19 @@
           <p class="philosophy-title">How I work</p>
           <div class="philosophy-grid">
             <article class="phil-item" style="--i: 0">
-              <h3>Research with intent</h3>
-              <p>Use contextual methods to uncover decision-making moments, not just user preferences.</p>
+              <span class="phil-num">01</span>
+              <h3>Think in systems, not screens</h3>
+              <p>The most important design decisions happen before anything goes into Figma. I push back on assumptions, reframe problems, and make sure the team is solving the right thing before we spend time solving it well.</p>
             </article>
             <article class="phil-item" style="--i: 1">
-              <h3>Design systems as leverage</h3>
-              <p>Translate findings into reusable components, tokens, and patterns that scale across teams.</p>
+              <span class="phil-num">02</span>
+              <h3>Accountability doesn't end at handoff</h3>
+              <p>I don't consider a feature done when the specs are delivered. I stay in the work through engineering, track usage after launch, and iterate until the experience actually performs the way it was designed to.</p>
             </article>
             <article class="phil-item" style="--i: 2">
-              <h3>Narrative-driven delivery</h3>
-              <p>Align teams through clear rationale, measurable outcomes, and implementation-ready artifacts.</p>
+              <span class="phil-num">03</span>
+              <h3>Make the vision tangible</h3>
+              <p>Vibe coding is an integral part of my design toolkit. Showing stakeholders something real, connected to live data, moves alignment faster than any presentation deck. And in the world of AI, there's no better way to prove a direction works than to build it.</p>
             </article>
           </div>
         </div>
@@ -292,6 +310,7 @@
         <h2>Open to senior UX and design strategy opportunities</h2>
         <p>Based in Shanghai, collaborating globally across product organizations.</p>
         <div class="contact-links">
+          <a class="btn contact-btn" href="Mehak-Sharma-CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
           <a class="btn contact-btn" href="mailto:meksharma@gmail.com">Email</a>
           <a class="btn contact-btn" href="https://www.linkedin.com/in/meksharma/" target="_blank" rel="noreferrer">
             LinkedIn
@@ -307,7 +326,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=1782818431"></script>
-  <script src="chat.js?v=1782818431"></script>
+  <script src="script.js?v=1782818432"></script>
+  <script src="chat.js?v=2026090703"></script>
 </body>
 </html>

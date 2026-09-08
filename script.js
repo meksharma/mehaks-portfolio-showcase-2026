@@ -2,23 +2,53 @@ const menuToggle = document.getElementById("menu-toggle");
 const siteNav = document.getElementById("site-nav");
 const themeToggle = document.getElementById("theme-toggle");
 const yearNode = document.getElementById("year");
+const aboutMedia = document.querySelector(".about-media");
+
+if (aboutMedia) {
+  const portraitRevealKey = "portfolio-portrait-color-revealed";
+  if (sessionStorage.getItem(portraitRevealKey) === "true") {
+    aboutMedia.classList.add("is-color", "is-session-revealed");
+  } else {
+    aboutMedia.addEventListener("mouseenter", () => {
+      aboutMedia.classList.add("is-color");
+      sessionStorage.setItem(portraitRevealKey, "true");
+    }, { once: true });
+  }
+}
 
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
 }
 
 if (menuToggle && siteNav) {
+  const closeMenu = () => {
+    siteNav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+  };
+
   menuToggle.addEventListener("click", () => {
     const expanded = menuToggle.getAttribute("aria-expanded") === "true";
     menuToggle.setAttribute("aria-expanded", String(!expanded));
+    menuToggle.setAttribute("aria-label", expanded ? "Open navigation menu" : "Close navigation menu");
     siteNav.classList.toggle("open");
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!siteNav.contains(event.target) && !menuToggle.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteNav.classList.contains("open")) {
+      closeMenu();
+      menuToggle.focus();
+    }
   });
 }
 
@@ -78,10 +108,21 @@ if (backToTop) {
 const philosophy = document.getElementById("approach");
 if (philosophy) {
   const items = Array.from(philosophy.querySelectorAll(".phil-item"));
+  const mobileQuery = window.matchMedia("(max-width: 760px)");
   const clamp = (n) => Math.min(1, Math.max(0, n));
   const easeOut = (t) => 1 - Math.pow(1 - t, 3);
   const n = items.length;
   const updatePhilosophy = () => {
+    if (mobileQuery.matches) {
+      const viewportCenter = window.innerHeight / 2;
+      const closestItem = items.reduce((closest, item) => {
+        const rect = item.getBoundingClientRect();
+        const distance = Math.abs(rect.top + rect.height / 2 - viewportCenter);
+        return !closest || distance < closest.distance ? { item, distance } : closest;
+      }, null);
+      items.forEach((item) => item.classList.toggle("is-focused", item === closestItem.item));
+      return;
+    }
     const rect = philosophy.getBoundingClientRect();
     const total = rect.height - window.innerHeight;
     const scrolled = clamp(-rect.top / (total || 1));

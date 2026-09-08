@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehak Sharma | CV</title>
+  <meta name="description" content="CV of Mehak Sharma, a design leader specialising in AI products and mobile experiences.">
+  <style>
+    :root {
+      --ink: #171923;
+      --muted: #626a7c;
+      --faint: #9aa0ad;
+      --line: #d9dce4;
+      --accent: #4455f5;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    html,
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #edf0f5;
+      font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body { padding: 24px; }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 14mm 14mm 12mm;
+      background: var(--paper);
+      border-top: 1.6mm solid var(--accent);
+      box-shadow: 0 18px 60px rgba(30, 38, 62, 0.12);
+    }
+
+    .masthead { margin-bottom: 9mm; }
+
+    h1 {
+      margin: 0;
+      color: var(--accent);
+      font-size: 26pt;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+
+    .role {
+      margin: 2.4mm 0 0;
+      font-size: 11.5pt;
+      font-weight: 650;
+      line-height: 1.25;
+    }
+
+    .summary {
+      max-width: 165mm;
+      margin: 2.6mm 0 0;
+      color: var(--muted);
+      font-size: 8.9pt;
+      line-height: 1.42;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(58mm, 0.85fr);
+      gap: 11mm;
+      align-items: start;
+    }
+
+    .sidebar {
+      padding-left: 0;
+    }
+
+    .section + .section { margin-top: 7mm; }
+
+    .section-title {
+      margin: 0 0 4.2mm;
+      padding-bottom: 2mm;
+      border-bottom: 0.35mm solid var(--line);
+      font-size: 7.5pt;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .job + .job { margin-top: 5mm; }
+
+    .date {
+      margin: 0 0 1.4mm;
+      color: var(--faint);
+      font-size: 7.4pt;
+      line-height: 1;
+    }
+
+    .company,
+    .entry-name {
+      margin: 0;
+      color: var(--accent);
+      font-size: 10.1pt;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .job-title {
+      margin: 1.3mm 0 0;
+      font-size: 8.2pt;
+      font-weight: 700;
+      line-height: 1.32;
+    }
+
+    ul {
+      margin: 2mm 0 0;
+      padding-left: 4mm;
+    }
+
+    li {
+      padding-left: 0.6mm;
+      font-size: 7.85pt;
+      line-height: 1.38;
+    }
+
+    li + li { margin-top: 2.2mm; }
+    strong { font-weight: 700; }
+    .entry + .entry { margin-top: 4.2mm; }
+
+    .entry-detail,
+    .recognition-item p {
+      margin: 1.2mm 0 0;
+      font-size: 7.85pt;
+      line-height: 1.38;
+    }
+
+    .recognition-item + .recognition-item { margin-top: 3.6mm; }
+
+    .contact-list,
+    .skills-list {
+      display: grid;
+      gap: 2.6mm;
+      margin: 0;
+    }
+
+    .contact-item dt,
+    .rail-label {
+      margin: 0 0 0.5mm;
+      font-size: 6.9pt;
+      font-weight: 800;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .contact-item dd,
+    .skills-list p {
+      margin: 0;
+      overflow-wrap: anywhere;
+      font-size: 7.5pt;
+      line-height: 1.34;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-link {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 1.2px;
+    }
+
+    @media print {
+      html,
+      body {
+        width: 210mm;
+        height: 297mm;
+        background: var(--paper);
+      }
+
+      body { padding: 0; }
+
+      .page {
+        min-height: 297mm;
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      body { padding: 0; }
+
+      .page {
+        width: 100%;
+        min-height: 100vh;
+        padding: 32px 24px;
+        box-shadow: none;
+      }
+
+      .layout { grid-template-columns: 1fr; }
+
+      .sidebar {
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <h1>Mehak Sharma</h1>
+      <p class="role">Design Leader · AI Products &amp; Mobile Experiences</p>
+      <p class="summary">Senior Product Designer with 10+ years across AI products, consumer apps, and B2B platforms. I set design direction, mentor designers, align teams around complex product decisions, and stay close to delivery until the experience performs.</p>
+    </header>
+
+    <div class="layout">
+      <section class="section" aria-labelledby="experience-title">
+        <h2 class="section-title" id="experience-title">Experience</h2>
+
+        <article class="job">
+          <p class="date">Apr 2022 – Present</p>
+          <h3 class="company">Microsoft</h3>
+          <p class="job-title">Senior Product Designer · Shanghai</p>
+          <ul>
+            <li>Set the design direction for <strong>Copilot Summarize in Outlook Mobile</strong>, defining its interaction model from first principles and helping the feature reach <strong>2.3M+ iOS users</strong>.</li>
+            <li>Led the experience across three phases: Outlook's first mobile AI entry point, multi-turn Copilot Chat integration, and a proactive action system above the inbox.</li>
+            <li>Built a working prototype connected to real M365 data to align stakeholders; contributed to prompt engineering, experiments, and usage analysis to improve AI output quality.</li>
+            <li>Mentor designers and raise the quality bar through design direction and critique. Previously designed Teams Mobile search and now contributes to Outlook's reading pane and file previewer.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <p class="date">Jul 2019 – Apr 2022</p>
+          <h3 class="company">Agoda (Booking Holdings)</h3>
+          <p class="job-title">Senior UX Designer · Bangkok</p>
+          <ul>
+            <li>Led loyalty and growth design across the customer journey, making rewards easier to understand and supporting deeper repeat engagement.</li>
+            <li>Owned end-to-end B2B property workflows spanning onboarding, settings, rates, and their reflection in Agoda's consumer app.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <p class="date">2016 – 2019</p>
+          <h3 class="company">SAP</h3>
+          <p class="job-title">UX Experience Design Specialist · Bangalore</p>
+          <ul>
+            <li>Designed B2B products across data privacy, project management, and warehouse management; partnered with the German team and conducted in-market research to identify product gaps.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <p class="date">2015 – 2016</p>
+          <h3 class="company">Samsung</h3>
+          <p class="job-title">UX Designer · Bangalore</p>
+          <ul>
+            <li>Worked on the first My Galaxy app, unifying entertainment, offers, and services for Samsung device owners.</li>
+          </ul>
+        </article>
+      </section>
+
+      <aside class="sidebar" aria-label="Profile details">
+        <section class="section" aria-labelledby="contact-title">
+          <h2 class="section-title" id="contact-title">Contact</h2>
+          <dl class="contact-list">
+            <div class="contact-item">
+              <dt>Portfolio</dt>
+              <dd><a class="contact-link" href="https://meksharma.github.io/portfolio/">meksharma.github.io/<wbr>portfolio</a></dd>
+            </div>
+            <div class="contact-item">
+              <dt>Email</dt>
+              <dd><a href="mailto:meksharma@gmail.com">meksharma@<wbr>gmail.com</a></dd>
+            </div>
+            <div class="contact-item">
+              <dt>LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/meksharma/">linkedin.com/in/<wbr>meksharma</a></dd>
+            </div>
+            <div class="contact-item">
+              <dt>Phone</dt>
+              <dd><a href="tel:+8618149790920">+86 181 4979 0920</a></dd>
+            </div>
+            <div class="contact-item">
+              <dt>WeChat</dt>
+              <dd>mek.sharma</dd>
+            </div>
+            <div class="contact-item">
+              <dt>Location</dt>
+              <dd>Shanghai, China<br>Open to relocation</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="section" aria-labelledby="strengths-title">
+          <h2 class="section-title" id="strengths-title">Core Strengths</h2>
+          <div class="skills-list">
+            <p>Design direction &amp; critique</p>
+            <p>Mentoring &amp; capability building</p>
+            <p>AI/UX product strategy</p>
+            <p>Vibe coding &amp; prototyping</p>
+            <p>Research &amp; experimentation</p>
+            <p>Prompt engineering</p>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="recognition-title">
+          <h2 class="section-title" id="recognition-title">Leadership</h2>
+          <div class="recognition-item">
+            <p><strong>Design mentor</strong> · Mentor designers and lead skill-growth sessions.</p>
+          </div>
+          <div class="recognition-item">
+            <p><strong>SAP Certified Design Thinking Coach</strong> · Facilitated workshops with internal teams.</p>
+          </div>
+          <div class="recognition-item">
+            <p><strong>Cross-cultural collaboration</strong> · Worked across teams in Germany, China, and the US.</p>
+          </div>
+          <div class="recognition-item">
+            <p><strong>Author</strong> · Presented a UX paper on data privacy at IADIS, Madrid.</p>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="education-title">
+          <h2 class="section-title" id="education-title">Education</h2>
+          <article class="entry">
+            <p class="date">2011 – 2014</p>
+            <h3 class="entry-name">National Institute of Design</h3>
+            <p class="entry-detail">Master's in Design</p>
+          </article>
+          <article class="entry">
+            <p class="date">2008 – 2011</p>
+            <h3 class="entry-name">Delhi University</h3>
+            <p class="entry-detail">Bachelor's in Fine Art</p>
+          </article>
+        </section>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
