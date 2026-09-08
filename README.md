@@ -10,7 +10,7 @@ The previous portfolio website is intentionally unpublished. The source and hist
 | --- | --- |
 | Outlook AAA Simulator | [Launch simulator](https://meksharma.github.io/outlook-aaa-simulator/) |
 | Outlook Mobile Prototype | [Launch prototype](https://meksharma.github.io/outlook-mobile/) |
-| Motion Phrasebook | [Explore motion patterns](https://meksharma.github.io/outlook-aaa-motion-lab/) |
+| Outlook Liquid Glass Simulator | [Explore motion patterns](https://meksharma.github.io/outlook-liquid-glass-simulator/) |
 
 ## How to View
 
