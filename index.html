@@ -77,23 +77,33 @@
             <p class="about-sub">Ten years of design craft + taste + vibe coding fluency to bring ideas to life.</p>
           </div>
           <figure class="about-media">
-            <img
-              class="about-photo about-photo-bw"
-              src="BW photo Mehak.png"
-              alt="Portrait of Mehak Sharma"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            >
-            <img
-              class="about-photo about-photo-color"
-              src="Mehak Sharma Portfolio image 2.png"
-              alt=""
-              aria-hidden="true"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            >
+            <picture>
+              <source srcset="mehak-portrait-bw.avif" type="image/avif">
+              <img
+                class="about-photo about-photo-bw"
+                src="mehak-portrait-bw.png"
+                width="796"
+                height="800"
+                alt="Portrait of Mehak Sharma"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              >
+            </picture>
+            <picture>
+              <source srcset="mehak-portrait-color.avif" type="image/avif">
+              <img
+                class="about-photo about-photo-color"
+                src="mehak-portrait-color.png"
+                width="796"
+                height="800"
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              >
+            </picture>
           </figure>
         </div>
 
