@@ -1,4 +1,4 @@
-# Mehak Sharma Portfolio
+# Mehak’s Portfolio Showcase 2026
 
 A portfolio source repository and directory of Mehak Sharma's public prototypes.
 
