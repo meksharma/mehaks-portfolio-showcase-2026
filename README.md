@@ -1,18 +1,13 @@
 # Mehak Sharma Portfolio
 
-A public portfolio and prototype directory for Mehak Sharma's design work.
+A portfolio source repository and directory of Mehak Sharma's public prototypes.
 
-## Open the Portfolio
-
-**[View the live portfolio](https://meksharma.github.io/portfolio/)**
-
-No installation or Microsoft sign-in is required. Open the link in any modern browser.
+The previous portfolio website is intentionally unpublished. The source and history remain available in this repository.
 
 ## Public Prototype Directory
 
 | Prototype | Open |
 | --- | --- |
-| Portfolio | [View portfolio](https://meksharma.github.io/portfolio/) |
 | Outlook AAA Simulator | [Launch simulator](https://meksharma.github.io/outlook-aaa-simulator/) |
 | Outlook Mobile Prototype | [Launch prototype](https://meksharma.github.io/outlook-mobile/) |
 | Motion Phrasebook | [Explore motion patterns](https://meksharma.github.io/outlook-aaa-motion-lab/) |
@@ -27,4 +22,4 @@ These links are public and can be shared with people outside Microsoft.
 
 ## Local Preview
 
-Open `index.html` in a browser. The public site is deployed from the root of the `main` branch with GitHub Pages.
+Open `index.html` in a browser. GitHub Pages is currently disabled for this repository.
