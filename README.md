@@ -11,9 +11,7 @@ product design work in a responsive, interactive website.
 
 ### Featured Work
 
-- **Summarize experience in Outlook Mobile** — A Microsoft case study exploring
-	how AI-generated summaries can help people understand long email threads more
-	quickly and confidently.
+- **Summarize experience in Outlook Mobile** — A Microsoft case study about helping people understand long email threads quickly and confidently with AI-generated summaries.
 - Additional case studies are being prepared as the portfolio evolves.
 
 ### Portfolio Sections
