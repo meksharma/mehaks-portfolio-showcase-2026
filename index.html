@@ -21,7 +21,7 @@
     window.scrollTo(0, 0);
     window.addEventListener("pageshow", () => window.scrollTo(0, 0));
   </script>
-  <link rel="stylesheet" href="styles.css?v=1782818431">
+  <link rel="stylesheet" href="styles.css?v=2026091001">
   <link rel="stylesheet" href="chat.css?v=2026090703">
 </head>
 <body>
@@ -53,6 +53,7 @@
           <li><a href="#about-text">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="https://github.com/meksharma" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </nav>
 
@@ -153,51 +154,124 @@
       <div class="project-page">
         <div class="container">
           <p class="project-kicker">Microsoft, 2024-26</p>
-          <h2 class="project-name">Summarize experience in Outlook Mobile</h2>
+          <h2 class="project-name">
+            <span>Transforming Outlook Summarize</span>
+            <span class="project-name-shift">
+              <span>from AI-Generated Text</span>
+              <span class="project-name-arrow" aria-hidden="true">→</span>
+              <span>Intelligent Workspace</span>
+            </span>
+          </h2>
 
-          <div class="project-overview reveal">
-            <p class="overview-term">Overview</p>
-            <div class="overview-body">
-              <p class="overview-desc">
-                Summarize is one of the strongest Copilot features inside Microsoft Outlook, with
-                over 2.3 million users who have tried it on iOS alone. I joined as the first
-                principles designer in August 2024 and owned the feature end-to-end - from
-                introducing AI to Outlook mobile users for the first time, to integrating it into
-                Copilot Chat, to currently prototyping the next evolution of how AI surfaces inside
-                the inbox.
-              </p>
-              <p class="overview-release">Market: Global &nbsp;|&nbsp; Platform: Outlook Mobile &nbsp;|&nbsp; Release: 2024-Present</p>
+          <div class="project-overview project-summary reveal">
+            <p class="overview-term">Project summary</p>
+            <div class="overview-body project-summary-body">
+              <section class="project-summary-block">
+                <p class="overview-desc">
+                  Summarize is Outlook Mobile's most-used Copilot scenario, but success was never
+                  just about generating summaries. The real challenge was helping users quickly
+                  understand complex conversations and take action without adding cognitive load.
+                  Over time, the experience evolved from a reactive AI feature into an intelligent,
+                  embedded experience that lives directly within the reading flow.
+                </p>
+                <figure class="before-after">
+                  <div class="before-after-stage">
+                    <video autoplay muted loop playsinline preload="metadata" aria-label="After: Outlook Mobile Summarize experience">
+                      <source src="Video 1.mp4" type="video/mp4">
+                    </video>
+                    <div class="before-after-before" aria-hidden="true">
+                      <video autoplay muted loop playsinline preload="metadata">
+                        <source src="Before.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <span class="before-after-label before-after-label-before">Before</span>
+                    <span class="before-after-label before-after-label-after">After</span>
+                    <div class="before-after-divider" aria-hidden="true">
+                      <span>↔</span>
+                    </div>
+                    <input
+                      class="before-after-control"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="50"
+                      aria-label="Adjust the before and after comparison"
+                    >
+                  </div>
+                </figure>
+                <p class="overview-release">Market: Global &nbsp;|&nbsp; Platform: Outlook Mobile &nbsp;|&nbsp; Release: 2024-Present</p>
+              </section>
+
+              <section class="project-summary-block">
+                <p class="project-summary-label">My role</p>
+                <p class="overview-desc">
+                  I led the evolution of Summarize across mobile and cross-platform experiences
+                  through summary UX and information architecture, card framework design, prompt
+                  and content design, Suggested User Actions (SUAs), proactive summary concepts,
+                  and on-canvas summary experiences.
+                </p>
+              </section>
+
+              <section class="project-summary-block">
+                <p class="project-summary-label">The problem</p>
+                <p class="overview-desc">
+                  Early versions of Summarize faced four key challenges: low discoverability
+                  because the feature was hidden behind buttons and menus; long, dense AI-generated
+                  text that was difficult to scan on mobile; reactive workflows that required users
+                  to manually invoke AI; and limited support for helping users understand what to do
+                  next.
+                </p>
+              </section>
+
+              <section class="project-summary-block">
+                <p class="project-summary-label">Impact</p>
+                <p class="overview-desc project-impact">
+                  Summarize evolved from a standalone AI feature into a scalable card-based
+                  intelligence framework. The work reduced cognitive load, improved discoverability,
+                  enabled contextual actions, and laid the foundation for future agentic experiences
+                  across Outlook. <strong>Mobile MAU: iOS - 3.7 million users; Android - 1 million
+                  users. Retention: iOS - 36.03%; Android - 27.44%.</strong>
+                </p>
+              </section>
             </div>
           </div>
 
-          <div class="project-overview reveal">
-            <p class="overview-term">My role</p>
-            <div class="overview-body">
-              <p class="overview-desc">
-                Lead designer across all phases of Summarize. Beyond design, I contributed to
-                prompt engineering, ran experiments, and tracked daily usage to refine the AI output
-                quality. In Phase 3, I experimented with vibe-coded design flows and prototyping -
-                bringing the vision to life beyond just mockups.
-              </p>
+          <div class="project-overview project-evolution-section reveal">
+            <p class="overview-term">Experience evolution</p>
+            <div class="overview-body project-evolution">
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">01</p>
+                <h3 class="project-detail-title">Better summary consumption</h3>
+                <p class="overview-desc">Redesigned summaries from dense paragraphs into shorter, more scannable experiences optimized for mobile reading.</p>
+              </article>
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">02</p>
+                <h3 class="project-detail-title">Summary cards and actions</h3>
+                <p class="overview-desc">Introduced card-based experiences with contextual actions, helping users move from understanding content to taking action.</p>
+              </article>
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">03</p>
+                <h3 class="project-detail-title">Proactive summaries</h3>
+                <p class="overview-desc">Explored AI experiences that automatically surfaced relevant summaries for complex conversations, reducing the need for manual invocation.</p>
+              </article>
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">04</p>
+                <h3 class="project-detail-title">On-canvas summaries</h3>
+                <p class="overview-desc">Helped evolve Summarize into an embedded reading-pane experience, bringing AI directly into the user's workflow and improving discoverability, engagement, and usability.</p>
+              </article>
             </div>
           </div>
 
-          <div class="project-overview reveal">
-            <p class="overview-term">Journey</p>
-            <div class="overview-body">
-              <p class="overview-desc">
-                <strong>Three phases. One evolving vision.</strong><br>
-                I've been part of the Summarize journey since AI capabilities were introduced into
-                Outlook mobile for the first time, then integrated Summarize into Copilot Chat for
-                deeper, multi-turn interactions. Currently, I am reimagining Summarize as a proactive
-                action system - surfacing above the inbox before users even start reading.
-              </p>
-            </div>
-          </div>
-
-          <figure class="project-mockup placeholder reveal">
-            Add project screens here
+          <figure class="project-mockup reveal">
+            <img
+              src="Background and 3 frames.png"
+              width="1914"
+              height="973"
+              loading="lazy"
+              alt="Three Outlook Mobile screens showing a summary with suggested actions, source references, and an added calendar event"
+            >
           </figure>
+
         </div>
       </div>
     </section>
@@ -205,37 +279,89 @@
     <section class="project-reveal" id="work-2">
       <div class="project-cover">
         <div class="container">
-          <h2 class="cover-title">Project Two</h2>
+          <h2 class="cover-title">Reimagining Agoda VIP</h2>
         </div>
       </div>
 
       <div class="project-page">
         <div class="container">
-          <p class="project-kicker">Project Two</p>
-          <h2 class="project-name">Project title coming soon</h2>
+          <p class="project-kicker">Agoda, 2019-22</p>
+          <h2 class="project-name">
+            <span>Transforming Agoda VIP program,</span>
+            <span class="project-name-shift">
+              <span>from Hidden Benefits</span>
+              <span class="project-name-arrow" aria-hidden="true">→</span>
+              <span>Growth Engine</span>
+            </span>
+          </h2>
 
-          <div class="project-overview reveal">
-            <p class="overview-term">Overview</p>
-            <div class="overview-body">
-              <p class="overview-desc">
-                Placeholder overview. Details for this project will be added later.
-              </p>
-              <p class="overview-release">Market: TBD &nbsp;|&nbsp; Platform: TBD &nbsp;|&nbsp; Release: TBD</p>
+          <div class="project-overview project-summary reveal">
+            <p class="overview-term">Project summary</p>
+            <div class="overview-body project-summary-body">
+              <section class="project-summary-block">
+                <p class="overview-desc">
+                  Agoda's VIP program faced low awareness, unclear benefits, and declining
+                  engagement. I helped redesign the experience across app and web, making loyalty
+                  benefits easier to discover, understand, and use throughout the booking journey.
+                </p>
+                <p class="overview-release">Market: Global &nbsp;|&nbsp; Platform: App and web &nbsp;|&nbsp; Release: 2021</p>
+                <figure class="project-mockup reveal">
+                  <img
+                    src="38.png"
+                    width="1914"
+                    height="973"
+                    loading="lazy"
+                    alt="Three Agoda mobile screens showing VIP status on the homepage, VIP deals in search results, and Platinum benefits on a property page"
+                  >
+                </figure>
+              </section>
+
+              <section class="project-summary-block">
+                <p class="project-summary-label">My role</p>
+                <p class="overview-desc">
+                  As Lead Product Designer, I led <strong>2 junior designers</strong>, defined the
+                  North Star and MVP roadmap, and partnered with Product, Research, Marketing, and
+                  Engineering from discovery through experimentation.
+                </p>
+              </section>
+
+              <section class="project-summary-block">
+                <p class="project-summary-label">Impact</p>
+                <p class="overview-desc project-impact">
+                  The redesign contributed approximately <strong>60K monthly bookings in Q4
+                  2021</strong>. Key experiments delivered <strong>+2.38% net bookings and 4K
+                  additional monthly bookings</strong>, while the personalized homepage generated
+                  <strong>+0.81% net bookings and 1K additional monthly bookings</strong>.
+                </p>
+              </section>
             </div>
           </div>
 
-          <div class="project-overview reveal">
-            <p class="overview-term">My role</p>
-            <div class="overview-body">
-              <p class="overview-desc">
-                Placeholder role description. To be filled in.
-              </p>
+          <div class="project-overview project-evolution-section reveal">
+            <p class="overview-term">Experience evolution</p>
+            <div class="overview-body project-evolution">
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">01</p>
+                <h3 class="project-detail-title">Clearer loyalty education</h3>
+                <p class="overview-desc">Simplified VIP tiers, benefits, status, and progression.</p>
+              </article>
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">02</p>
+                <h3 class="project-detail-title">Benefits across the journey</h3>
+                <p class="overview-desc">Integrated VIP messaging into home, search, property, booking, and post-booking experiences.</p>
+              </article>
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">03</p>
+                <h3 class="project-detail-title">Better decision support</h3>
+                <p class="overview-desc">Surfaced discounts and perks where they could influence hotel and room selection.</p>
+              </article>
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">04</p>
+                <h3 class="project-detail-title">Scalable framework</h3>
+                <p class="overview-desc">Created reusable patterns that informed Agoda's broader app refresh.</p>
+              </article>
             </div>
           </div>
-
-          <figure class="project-mockup placeholder reveal">
-            Add project screens here
-          </figure>
         </div>
       </div>
     </section>
@@ -325,6 +451,7 @@
           <a class="btn contact-btn" href="https://www.linkedin.com/in/meksharma/" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
+          <a class="btn contact-btn" href="https://github.com/meksharma" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
     </section>
@@ -336,7 +463,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=1782818432"></script>
+  <script src="script.js?v=2026091401"></script>
   <script src="chat.js?v=2026090703"></script>
 </body>
 </html>

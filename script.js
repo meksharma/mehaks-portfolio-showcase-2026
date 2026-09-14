@@ -58,8 +58,7 @@ const applyTheme = (theme) => {
 };
 
 const storedTheme = localStorage.getItem("portfolio-theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-applyTheme(storedTheme || (prefersDark ? "dark" : "light"));
+applyTheme(storedTheme || "dark");
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
@@ -104,6 +103,18 @@ if (backToTop) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
+document.querySelectorAll(".before-after").forEach((comparison) => {
+  const control = comparison.querySelector(".before-after-control");
+  if (!control) return;
+
+  const updateComparison = () => {
+    comparison.style.setProperty("--comparison-position", `${control.value}%`);
+  };
+
+  control.addEventListener("input", updateComparison);
+  updateComparison();
+});
 
 const philosophy = document.getElementById("approach");
 if (philosophy) {
