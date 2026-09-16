@@ -693,10 +693,14 @@ h2 {
 .about-facts .fact .fact-value:first-child {
   font-weight: 400;
   opacity: 0.62;
-  letter-spacing: 0.005em;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .about-facts .fact .fact-value:last-child {
+  font-size: clamp(1.35rem, 1.8vw, 1.75rem);
   font-weight: 400;
   margin-bottom: 0;
 }
