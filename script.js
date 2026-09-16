@@ -54,11 +54,9 @@ if (menuToggle && siteNav) {
 
 const applyTheme = (theme) => {
   document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("portfolio-theme", theme);
 };
 
-const storedTheme = localStorage.getItem("portfolio-theme");
-applyTheme(storedTheme || "dark");
+applyTheme("dark");
 
 if (themeToggle) {
   themeToggle.addEventListener("click", () => {
