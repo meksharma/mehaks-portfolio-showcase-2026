@@ -1219,10 +1219,11 @@ h2 {
 
 .overview-term {
   margin: 0.35rem 0 0;
-  font-size: inherit;
-  font-weight: 600;
-  letter-spacing: normal;
-  text-transform: none;
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
   color: var(--text);
 }
 
@@ -1257,10 +1258,11 @@ h2 {
 .project-summary-label {
   margin: 0 0 0.75rem;
   color: var(--company-accent);
-  font-size: inherit;
-  font-weight: 600;
-  letter-spacing: normal;
-  text-transform: none;
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .project-detail-title {
@@ -1316,6 +1318,11 @@ h2 {
   margin: clamp(2.5rem, 6vw, 5rem) 0 0;
 }
 
+.project-clickthrough {
+  max-width: 78rem;
+  padding-left: calc(11rem + clamp(1rem, 4vw, 3rem));
+}
+
 .project-mockup img,
 .project-mockup video {
   width: 100%;
@@ -1357,6 +1364,10 @@ h2 {
   .about-media {
     width: min(54vw, 320px);
     justify-self: start;
+  }
+
+  .project-clickthrough {
+    padding-left: 0;
   }
 
   .about-headline {
