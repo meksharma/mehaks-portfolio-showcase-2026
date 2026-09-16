@@ -605,7 +605,7 @@ h2 {
   font-weight: 400;
   color: var(--about-fg);
   opacity: 0.72;
-  max-width: 44ch;
+  max-width: none;
   line-height: 1.55;
 }
 
