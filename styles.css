@@ -679,7 +679,7 @@ h2 {
 
 .fact-value {
   display: block;
-  font-size: 1rem;
+  font-size: clamp(1.08rem, 1.5vw, 1.32rem);
   font-weight: 500;
   line-height: 1.5;
   color: var(--about-fg);
