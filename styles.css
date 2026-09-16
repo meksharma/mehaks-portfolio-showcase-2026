@@ -246,10 +246,21 @@ main,
   display: block;
   width: 100%;
   height: 100%;
-  background: var(--company-accent);
+  background: linear-gradient(
+    90deg,
+    #C686FF, #F5B9EA, #FFBA71, #AA6EEE, #FF6778, #BC82F3, #8D99FF, #C686FF
+  );
+  background-size: 200% 100%;
+  box-shadow: 0 0 8px rgba(141, 153, 255, 0.45);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.1s linear;
+  animation: scrollProgressFlow 7s linear infinite;
+}
+
+@keyframes scrollProgressFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 
 .site-header {
@@ -891,6 +902,7 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   .scroll-progress-fill {
     transition: none;
+    animation: none;
   }
 
   .scroll-reminder i::after {
