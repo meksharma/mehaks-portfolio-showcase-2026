@@ -105,7 +105,8 @@
 }
 
 .chat-launcher-input::placeholder {
-  color: var(--muted);
+  color: var(--text);
+  opacity: 0.48;
 }
 
 /* Send button hidden until the user types */
