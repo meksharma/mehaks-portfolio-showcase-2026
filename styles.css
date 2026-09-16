@@ -153,8 +153,8 @@ body::before {
     transparent 62%,
     transparent 100%
   );
-  opacity: 0.58;
-  filter: blur(34px);
+  opacity: 0.4;
+  filter: blur(38px);
   -webkit-mask-image:
     linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%),
     linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
