@@ -772,7 +772,7 @@ h2 {
   margin: 0;
   max-width: 32ch;
   font-size: var(--font-size-display);
-  font-weight: 680;
+  font-weight: 400;
   line-height: 1.12;
   letter-spacing: -0.025em;
   color: var(--text);
@@ -786,7 +786,7 @@ h2 {
 
 .background-copy .company-name {
   color: var(--company-accent);
-  font-weight: 600;
+  font-weight: inherit;
 }
 
 /* Rotating scroll badge removed */
