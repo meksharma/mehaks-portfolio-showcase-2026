@@ -104,13 +104,14 @@ if (backToTop) {
 
 const scrollProgress = document.getElementById("scroll-progress");
 if (scrollProgress) {
+  const scrollProgressFill = scrollProgress.querySelector(".scroll-progress-fill");
   let progressFrame = null;
 
   const updateScrollProgress = () => {
     progressFrame = null;
     const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = scrollableHeight > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollableHeight)) : 0;
-    scrollProgress.style.transform = `scaleX(${progress})`;
+    scrollProgressFill.style.transform = `scaleX(${progress})`;
     scrollProgress.setAttribute("aria-valuenow", String(Math.round(progress * 100)));
   };
 
