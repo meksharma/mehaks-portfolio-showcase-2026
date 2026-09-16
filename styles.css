@@ -63,6 +63,11 @@ html {
   scroll-snap-type: y proximity;
 }
 
+html.is-wheel-paging {
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+}
+
 /* ── Scroll reveal ── */
 .reveal {
   opacity: 0;

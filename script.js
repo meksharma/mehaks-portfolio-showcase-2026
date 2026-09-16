@@ -126,6 +126,60 @@ if (scrollProgress) {
   window.addEventListener("resize", requestScrollProgressUpdate);
 }
 
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const precisePointerQuery = window.matchMedia("(pointer: fine)");
+if (!reducedMotionQuery.matches && precisePointerQuery.matches) {
+  const pagingDuration = 850;
+  const wheelThreshold = 18;
+  let wheelDelta = 0;
+  let isPaging = false;
+
+  const easeInOutCubic = (progress) => progress < 0.5
+    ? 4 * progress ** 3
+    : 1 - ((-2 * progress + 2) ** 3) / 2;
+
+  const animateViewportPage = (direction) => {
+    const start = window.scrollY;
+    const maximum = document.documentElement.scrollHeight - window.innerHeight;
+    const destination = Math.min(maximum, Math.max(0, start + direction * window.innerHeight));
+    const distance = destination - start;
+
+    if (distance === 0) {
+      isPaging = false;
+      return;
+    }
+
+    const startedAt = performance.now();
+    const step = (now) => {
+      const progress = Math.min(1, (now - startedAt) / pagingDuration);
+      window.scrollTo(0, start + distance * easeInOutCubic(progress));
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        isPaging = false;
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  document.documentElement.classList.add("is-wheel-paging");
+  window.addEventListener("wheel", (event) => {
+    if (event.ctrlKey || event.target.closest(".chat-panel, input, textarea, select, [contenteditable='true']")) return;
+
+    event.preventDefault();
+    if (isPaging) return;
+
+    wheelDelta += event.deltaY;
+    if (Math.abs(wheelDelta) < wheelThreshold) return;
+
+    const direction = Math.sign(wheelDelta);
+    wheelDelta = 0;
+    isPaging = true;
+    animateViewportPage(direction);
+  }, { passive: false });
+}
+
 document.querySelectorAll(".before-after").forEach((comparison) => {
   const control = comparison.querySelector(".before-after-control");
   if (!control) return;
