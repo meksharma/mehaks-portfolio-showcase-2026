@@ -1035,8 +1035,8 @@ h2 {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(68% 105% at 37% 38%, rgba(151, 106, 238, 0.45) 0%, transparent 62%),
-    radial-gradient(68% 105% at 63% 58%, rgba(82, 156, 240, 0.42) 0%, transparent 62%);
+    radial-gradient(68% 105% at 37% 12%, rgba(151, 106, 238, 0.45) 0%, transparent 62%),
+    radial-gradient(68% 105% at 63% 28%, rgba(82, 156, 240, 0.42) 0%, transparent 62%);
   opacity: 0.85;
   filter: blur(4px);
   z-index: 0;
@@ -1050,8 +1050,8 @@ h2 {
 
 :root[data-theme="dark"] .project-cover::before {
   background:
-    radial-gradient(68% 105% at 37% 38%, rgba(190, 76, 255, 0.32) 0%, transparent 62%),
-    radial-gradient(68% 105% at 63% 58%, rgba(52, 130, 255, 0.50) 0%, transparent 62%);
+    radial-gradient(68% 105% at 37% 12%, rgba(190, 76, 255, 0.32) 0%, transparent 62%),
+    radial-gradient(68% 105% at 63% 28%, rgba(52, 130, 255, 0.50) 0%, transparent 62%);
   opacity: 0.7;
   mix-blend-mode: screen;
   filter: blur(8px);
