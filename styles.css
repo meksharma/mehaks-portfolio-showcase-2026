@@ -588,6 +588,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   min-width: 0;
+  transform: translateY(0.65rem);
 }
 
 .about-headline {
@@ -1370,6 +1371,10 @@ h2 {
     grid-template-columns: 1fr;
     gap: 1.4rem;
     margin-top: 0;
+  }
+
+  .about-main {
+    transform: none;
   }
 
   .about-media {
