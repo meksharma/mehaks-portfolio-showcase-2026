@@ -1264,6 +1264,20 @@ h2 {
   text-transform: uppercase;
 }
 
+.project-section-accent {
+  color: var(--company-accent);
+}
+
+.project-problem-title {
+  margin: 0 0 0.75rem;
+  max-width: 68ch;
+  color: var(--text);
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0;
+}
+
 .project-detail-title {
   margin: 0 0 0.75rem;
   font-size: clamp(1.35rem, 2vw, 1.8rem);
@@ -1319,11 +1333,11 @@ h2 {
 
 .project-question {
   margin: 0;
-  max-width: 34ch;
+  max-width: 68ch;
   color: var(--text);
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
-  font-weight: 500;
-  line-height: 1.3;
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  font-weight: 600;
+  line-height: 1.55;
 }
 
 .project-results {
