@@ -126,6 +126,25 @@ if (scrollProgress) {
   window.addEventListener("resize", requestScrollProgressUpdate);
 }
 
+document.querySelectorAll(".project-video").forEach((player) => {
+  const video = player.querySelector("video");
+  const replayButton = player.querySelector(".video-replay");
+  if (!video || !replayButton) return;
+
+  video.addEventListener("ended", () => {
+    replayButton.hidden = false;
+  });
+
+  video.addEventListener("play", () => {
+    replayButton.hidden = true;
+  });
+
+  replayButton.addEventListener("click", () => {
+    video.currentTime = 0;
+    video.play();
+  });
+});
+
 const philosophy = document.getElementById("approach");
 if (philosophy) {
   const items = Array.from(philosophy.querySelectorAll(".phil-item"));
