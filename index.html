@@ -21,7 +21,7 @@
     window.scrollTo(0, 0);
     window.addEventListener("pageshow", () => window.scrollTo(0, 0));
   </script>
-  <link rel="stylesheet" href="styles.css?v=2026091634">
+  <link rel="stylesheet" href="styles.css?v=2026091635">
   <link rel="stylesheet" href="chat.css?v=2026091602">
 </head>
 <body>
@@ -268,6 +268,174 @@
         <div class="container project-cover-content">
           <div class="project-cover-meta">
             <span>Project 02</span>
+            <span>Microsoft</span>
+          </div>
+          <h2 class="cover-title">
+            <span>Search Experiences on Teams Mobile:</span>
+            <span class="cover-title-shift">Making Search Faster &amp; More Discoverable</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="project-page">
+        <div class="container">
+          <div class="project-overview project-summary reveal">
+            <p class="overview-term">Overview</p>
+            <div class="overview-body project-summary-body">
+              <section class="project-summary-block">
+                <p class="overview-desc">
+                  Search was an underused capability on Teams Mobile. Only <strong>14.5 million users,
+                  representing 23% of Teams Mobile WAU, were using Search</strong>. Of the documented
+                  search journeys, <strong>70% went to the chat canvas while 19.5% went to the SERP
+                  canvas</strong>.
+                </p>
+                <p class="overview-release">Market: Global &nbsp;|&nbsp; Platform: Teams Mobile &nbsp;|&nbsp; Release: iOS and Android</p>
+              </section>
+              <section class="project-summary-block">
+                <p class="project-summary-label">The goal</p>
+                <p class="overview-desc">
+                  The CY23 H2 goal was clear: <strong>increase Search Success Rate, reduce abandonment,
+                  and maintain coherence with the Teams desktop experience.</strong>
+                </p>
+              </section>
+            </div>
+          </div>
+
+          <div class="project-overview reveal">
+            <p class="overview-term">Problem statement</p>
+            <div class="overview-body project-summary-body">
+              <section class="project-summary-block">
+                <h3 class="project-detail-title">Search existed, but users needed more help understanding what they could search for.</h3>
+                <p class="overview-desc">
+                  Research through user interviews, OCV, and quarterly feedback surfaced two core
+                  issues. Users did not clearly understand that Teams Mobile Search could find content
+                  beyond people, such as <strong>messages, meeting chats, and files</strong>. The
+                  existing experience provided little assistance in making those possibilities clear.
+                </p>
+                <p class="overview-desc project-paragraph">
+                  At the same time, users wanted to search across chats, files, and meetings, but the
+                  experience did not consistently surface the results they expected, contributing to
+                  abandonment.
+                </p>
+              </section>
+              <section class="project-summary-block">
+                <p class="project-summary-label">The design challenge</p>
+                <blockquote class="project-question">
+                  How might we make Teams Mobile Search easier to understand and formulate, so users
+                  can find the right content with less abandonment?
+                </blockquote>
+              </section>
+            </div>
+          </div>
+
+          <div class="project-overview project-evolution-section reveal">
+            <p class="overview-term">My approach</p>
+            <div class="overview-body project-evolution">
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">01</p>
+                <h3 class="project-detail-title">Before users search</h3>
+                <p class="overview-desc">Make the empty search state useful by surfacing recently searched content and exposing more searchable entities.</p>
+              </article>
+              <article class="project-evolution-item">
+                <p class="project-evolution-number">02</p>
+                <h3 class="project-detail-title">While users formulate a query</h3>
+                <p class="overview-desc">Improve autosuggest so users can see more diverse entities and get stronger guidance towards relevant searches.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="project-overview project-evolution-section reveal">
+            <p class="overview-term">01 | Zero Input</p>
+            <div class="overview-body project-summary-body">
+              <section class="project-summary-block">
+                <h3 class="project-detail-title">Making Search useful before a query</h3>
+                <p class="overview-desc">
+                  Rather than depending on users knowing exactly what to type, we surfaced
+                  <strong>recently searched Group Chats and Files</strong>, with more entity types
+                  represented under Recent Search. The experience shipped on both Android and iOS.
+                </p>
+              </section>
+              <section class="project-summary-block project-results">
+                <p class="project-summary-label">Impact</p>
+                <p class="project-result"><strong>↓ 0.87%</strong> abandonment</p>
+                <p class="project-result"><strong>↑ 3.83%</strong> CCR</p>
+              </section>
+            </div>
+          </div>
+
+          <div class="project-overview project-evolution-section reveal">
+            <p class="overview-term">02 | Autosuggest</p>
+            <div class="overview-body project-summary-body">
+              <section class="project-summary-block">
+                <h3 class="project-detail-title">Helping users formulate better searches</h3>
+                <p class="overview-desc">
+                  The second opportunity was what happened after users started typing. The redesigned
+                  autosuggest experience surfaced <strong>more diverse entities</strong>, exposing the
+                  range of searchable content while users formulated their queries. It shipped across
+                  Android and iOS.
+                </p>
+              </section>
+              <section class="project-summary-block project-results">
+                <p class="project-summary-label">Impact</p>
+                <p class="project-result"><strong>↑ 1.27%</strong> Search Success Rate</p>
+                <p class="project-result"><strong>↓ 7.77%</strong> abandonment</p>
+              </section>
+            </div>
+          </div>
+
+          <div class="project-overview project-evolution-section reveal">
+            <p class="overview-term">03 | Coherence</p>
+            <div class="overview-body project-summary-body">
+              <section class="project-summary-block">
+                <h3 class="project-detail-title">Creating cross-platform coherence</h3>
+                <p class="overview-desc">
+                  Another part of the work brought the mobile experience closer to the established
+                  <strong>Teams Desktop</strong> search model, helping users move towards additional
+                  search suggestions.
+                </p>
+              </section>
+              <section class="project-summary-block project-results">
+                <p class="project-summary-label">iOS release</p>
+                <p class="project-result"><strong>Flat</strong> Search Success Rate</p>
+                <p class="project-result"><strong>↑ 0.71%</strong> CCR</p>
+              </section>
+            </div>
+          </div>
+
+          <div class="project-overview project-evolution-section reveal">
+            <p class="overview-term">Outcome</p>
+            <div class="overview-body project-summary-body">
+              <section class="project-summary-block">
+                <p class="overview-desc project-impact">
+                  The work moved Teams Mobile Search from requiring users to already know
+                  <strong>what to search for</strong> towards an experience that helped them
+                  <strong>discover and formulate searches</strong>, across a surface used by
+                  <strong>14.5 million users, equivalent to 23% of Teams Mobile WAU</strong>.
+                </p>
+                <div class="project-metrics" aria-label="Key outcomes">
+                  <p><strong>↓ 7.77%</strong><span>Abandonment</span></p>
+                  <p><strong>↑ 1.27%</strong><span>Search Success Rate</span></p>
+                  <p><strong>↑ 3.83%</strong><span>CCR</span></p>
+                </div>
+              </section>
+              <section class="project-summary-block">
+                <p class="project-closing">
+                  I redesigned key moments in the Teams Mobile search journey, using research and
+                  product metrics to move from problem identification to shipped iOS and Android
+                  experiences.
+                </p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-reveal" id="work-3">
+      <div class="project-cover">
+        <div class="container project-cover-content">
+          <div class="project-cover-meta">
+            <span>Project 03</span>
             <span>Agoda, 2019-22</span>
           </div>
           <h2 class="cover-title">
