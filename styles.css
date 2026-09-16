@@ -1035,10 +1035,10 @@ h2 {
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(110% 95% at 88% -2%, rgba(140, 110, 245, 0.45) 0%, transparent 52%),
-    radial-gradient(120% 110% at 70% 6%, rgba(90, 190, 250, 0.42) 0%, transparent 55%),
-    radial-gradient(100% 95% at 24% 4%, rgba(255, 205, 80, 0.38) 0%, transparent 54%),
-    radial-gradient(105% 90% at 8% 22%, rgba(96, 132, 248, 0.40) 0%, transparent 50%);
+    radial-gradient(110% 95% at 88% -2%, rgba(218, 218, 225, 0.45) 0%, transparent 52%),
+    radial-gradient(120% 110% at 70% 6%, rgba(142, 187, 232, 0.42) 0%, transparent 55%),
+    radial-gradient(100% 95% at 24% 4%, rgba(167, 146, 231, 0.38) 0%, transparent 54%),
+    radial-gradient(105% 90% at 8% 22%, rgba(79, 105, 220, 0.40) 0%, transparent 50%);
   opacity: 0.85;
   filter: blur(4px);
   z-index: 0;
@@ -1052,8 +1052,8 @@ h2 {
 
 :root[data-theme="dark"] .project-cover::before {
   background:
-    radial-gradient(120% 110% at 78% 4%, rgba(80, 196, 255, 0.50) 0%, transparent 55%),
-    radial-gradient(100% 90% at 30% 10%, rgba(255, 200, 70, 0.32) 0%, transparent 52%);
+    radial-gradient(120% 110% at 78% 4%, rgba(142, 187, 232, 0.50) 0%, transparent 55%),
+    radial-gradient(100% 90% at 30% 10%, rgba(167, 146, 231, 0.32) 0%, transparent 52%);
   opacity: 0.7;
   mix-blend-mode: screen;
   filter: blur(8px);
