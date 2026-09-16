@@ -1112,12 +1112,13 @@ h2 {
   font-weight: 400;
   line-height: 1.02;
   letter-spacing: -0.025em;
-  max-width: 22ch;
+  max-width: none;
   color: var(--text);
 }
 
 .cover-title > span {
   display: block;
+  white-space: nowrap;
 }
 
 .cover-title-shift {
@@ -1462,6 +1463,10 @@ h2 {
 
   .about-headline {
     max-width: 18ch;
+  }
+
+  .cover-title > span {
+    white-space: normal;
   }
 
   .stats {
