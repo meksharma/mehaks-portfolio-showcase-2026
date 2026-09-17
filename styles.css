@@ -616,7 +616,7 @@ h2 {
 
 .about-headline {
   font-size: var(--font-size-slide-title);
-  font-weight: 680;
+  font-weight: 400;
   line-height: 1.02;
   letter-spacing: -0.025em;
   max-width: 20ch;
@@ -810,10 +810,12 @@ h2 {
   color: var(--text);
 }
 
-.background-copy br + br {
-  display: block;
-  content: "";
-  height: 0.5rem;
+.background-copy p {
+  margin: 0;
+}
+
+.background-copy p + p {
+  margin-top: 0.65em;
 }
 
 .background-copy .company-name {
@@ -950,7 +952,7 @@ h2 {
 }
 
 .contact-card h2 {
-  margin-top: clamp(1.5rem, 4vh, 2.75rem);
+  margin-top: clamp(1.5rem, 3vh, 2.25rem);
   max-width: none;
   color: #fff;
   font-size: var(--font-size-slide-title);
@@ -962,14 +964,13 @@ h2 {
 .contact-email {
   display: inline-flex;
   align-items: center;
-  gap: 1.25rem;
-  margin-top: clamp(1.75rem, 4vh, 3rem);
-  padding: 0 0 0.45rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  gap: 0.75rem;
+  margin-top: clamp(1.25rem, 2.5vh, 1.75rem);
+  padding: 0;
   color: #fff;
-  font-size: var(--contact-font-size);
-  font-weight: 500;
-  line-height: 1.55;
+  font-size: clamp(1.05rem, 1.2vw, 1.2rem);
+  font-weight: 400;
+  line-height: 1.35;
   text-decoration: none;
 }
 
@@ -985,7 +986,7 @@ h2 {
 
 .contact-note {
   color: #fff;
-  margin: clamp(1.5rem, 3vh, 2.25rem) 0 0;
+  margin: clamp(1.1rem, 2vh, 1.5rem) 0 0;
   max-width: 58ch;
   font-size: var(--contact-font-size);
   font-weight: 400;
@@ -994,7 +995,7 @@ h2 {
 
 .contact-links {
   width: 100%;
-  margin-top: clamp(3rem, 9vh, 6rem);
+  margin-top: clamp(2.5rem, 5vh, 3.5rem);
   padding-top: 1.25rem;
   display: flex;
   justify-content: flex-start;
@@ -1696,13 +1697,13 @@ h2 {
   }
 
   .contact-email {
-    width: 100%;
-    justify-content: space-between;
+    width: auto;
+    justify-content: flex-start;
     gap: 1rem;
   }
 
   .contact-links {
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
   }
 
   .site-footer {
