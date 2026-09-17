@@ -844,8 +844,8 @@ h2 {
 .philosophy-title {
   margin: 0 0 clamp(1.1rem, 3vh, 2.4rem);
   font-size: clamp(1.4rem, 2.6vw, 2rem);
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-weight: 400;
+  letter-spacing: -0.025em;
   color: var(--company-accent);
 }
 
@@ -875,7 +875,7 @@ h2 {
 .phil-item h3 {
   margin: 0 0 clamp(1.2rem, 3vh, 2rem);
   font-size: var(--font-size-display);
-  font-weight: 680;
+  font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.05;
   color: var(--text);
