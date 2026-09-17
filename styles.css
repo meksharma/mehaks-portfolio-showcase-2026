@@ -788,15 +788,17 @@ h2 {
 /* ── Background ── */
 .background-section {
   background: transparent;
+  min-height: calc(100svh - 4rem);
+  padding: 0;
 }
 
 .background-wrap {
-  min-height: 100vh;
+  min-height: calc(100svh - 4rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.25rem;
-  padding: 4rem 0;
+  padding: clamp(1rem, 2.5vh, 2rem) 0;
 }
 
 .background-label {
@@ -1693,8 +1695,8 @@ h2 {
   }
 
   .background-wrap {
-    min-height: auto;
-    padding: 4rem 0;
+    min-height: calc(100svh - 4rem);
+    padding: 2.5rem 0;
   }
 
   .background-copy {
