@@ -176,10 +176,16 @@ main,
 
 #about,
 #background,
+#approach,
 .project-cover {
   position: relative;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
+}
+
+#approach {
+  scroll-margin-top: 4rem;
+  scroll-snap-stop: always;
 }
 
 .section > .container,

@@ -66,7 +66,8 @@ if (themeToggle) {
 }
 
 const initReveals = () => {
-  const revealEls = document.querySelectorAll(".reveal, .reveal-stagger");
+  const revealEls = document.querySelectorAll(".reveal:not(.philosophy-content), .reveal-stagger");
+  const philosophyContent = document.querySelector(".philosophy-content");
   if ("IntersectionObserver" in window && revealEls.length) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -82,6 +83,21 @@ const initReveals = () => {
     revealEls.forEach((el) => io.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add("in-view"));
+  }
+
+  if (philosophyContent && "IntersectionObserver" in window) {
+    const philosophyObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          philosophyContent.classList.add("in-view");
+          philosophyObserver.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+    philosophyObserver.observe(philosophyContent);
+  } else if (philosophyContent) {
+    philosophyContent.classList.add("in-view");
   }
 };
 
