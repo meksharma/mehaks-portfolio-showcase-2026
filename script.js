@@ -66,8 +66,14 @@ if (themeToggle) {
 }
 
 const initReveals = () => {
-  const revealEls = document.querySelectorAll(".reveal:not(.philosophy-content), .reveal-stagger");
+  const initialReveal = document.querySelector("#about .reveal");
+  const revealEls = document.querySelectorAll(".reveal:not(.about-grid):not(.philosophy-content), .reveal-stagger");
   const philosophyContent = document.querySelector(".philosophy-content");
+  if (initialReveal) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => initialReveal.classList.add("in-view"));
+    });
+  }
   if ("IntersectionObserver" in window && revealEls.length) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -99,6 +105,34 @@ const initReveals = () => {
   } else if (philosophyContent) {
     philosophyContent.classList.add("in-view");
   }
+};
+
+const initScrollSnap = () => {
+  const snapPages = Array.from(document.querySelectorAll("#about, #background, #approach, .project-cover, #contact"));
+  if (!snapPages.length) return;
+
+  let currentPage = snapPages.reduce((closest, page) => {
+    const distance = Math.abs(page.getBoundingClientRect().top - 64);
+    return !closest || distance < closest.distance ? { page, distance } : closest;
+  }, null).page;
+  currentPage.classList.add("is-snap-current");
+
+  let settleTimer = null;
+  const updateCurrentPage = () => {
+    const alignedPage = snapPages.find((page) => {
+      const top = page.getBoundingClientRect().top;
+      return Math.min(Math.abs(top), Math.abs(top - 64)) < 12;
+    });
+    if (!alignedPage || alignedPage === currentPage) return;
+    currentPage.classList.remove("is-snap-current");
+    currentPage = alignedPage;
+    currentPage.classList.add("is-snap-current");
+  };
+
+  window.addEventListener("scroll", () => {
+    window.clearTimeout(settleTimer);
+    settleTimer = window.setTimeout(updateCurrentPage, 180);
+  }, { passive: true });
 };
 
 const backToTop = document.getElementById("back-to-top");
@@ -164,6 +198,7 @@ document.querySelectorAll(".project-video").forEach((player) => {
 const startPage = () => {
   document.body.classList.add("loaded");
   initReveals();
+  initScrollSnap();
 };
 
 if (document.readyState === "loading") {

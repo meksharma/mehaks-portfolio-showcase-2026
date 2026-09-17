@@ -60,7 +60,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: none;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 4rem;
 }
 
 /* ── Scroll reveal ── */
@@ -184,9 +185,8 @@ main,
   scroll-snap-stop: normal;
 }
 
-#approach,
-#contact {
-  scroll-margin-top: 4rem;
+.is-snap-current {
+  scroll-snap-align: none !important;
 }
 
 .section > .container,
