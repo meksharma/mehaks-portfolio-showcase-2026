@@ -912,16 +912,16 @@ h2 {
 
 /* ── Contact ── */
 #contact {
+  --contact-font-size: clamp(1.25rem, 2.2vw, 1.75rem);
   position: relative;
   min-height: calc(100svh - 4rem);
   display: flex;
   align-items: center;
   margin-top: -40vh;
   overflow: hidden;
-  border-top: 1px solid var(--line);
-  background:
-    linear-gradient(130deg, color-mix(in srgb, var(--company-accent) 10%, transparent), transparent 42%),
-    linear-gradient(315deg, color-mix(in srgb, #ffcc46 8%, transparent), transparent 38%);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--bg);
+  color: #fff;
 }
 
 .contact-card {
@@ -936,7 +936,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  color: var(--company-accent);
+  color: #fff;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -952,14 +952,11 @@ h2 {
 
 .contact-card h2 {
   margin-top: clamp(1.5rem, 4vh, 2.75rem);
-  max-width: 14ch;
-  font-size: clamp(3.5rem, 8vw, 8rem);
-  font-weight: 680;
-  line-height: 0.92;
-}
-
-.contact-card h2 span {
-  color: var(--company-accent);
+  max-width: 36ch;
+  color: #fff;
+  font-size: var(--contact-font-size);
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .contact-email {
@@ -969,15 +966,15 @@ h2 {
   margin-top: clamp(2rem, 5vh, 3.5rem);
   padding: 0.7rem 0;
   border-bottom: 1px solid currentColor;
-  color: var(--text);
-  font-size: clamp(1.25rem, 2.5vw, 2.25rem);
+  color: #fff;
+  font-size: var(--contact-font-size);
   font-weight: 600;
   line-height: 1.2;
   text-decoration: none;
 }
 
 .contact-email-arrow {
-  color: var(--company-accent);
+  color: #fff;
   transition: transform 0.25s ease;
 }
 
@@ -986,9 +983,11 @@ h2 {
 }
 
 .contact-note {
-  color: var(--muted);
+  color: #fff;
   margin: clamp(1.5rem, 3vh, 2.25rem) 0 0;
   max-width: 58ch;
+  font-size: var(--contact-font-size);
+  line-height: 1.4;
 }
 
 .contact-links {
@@ -999,11 +998,11 @@ h2 {
   justify-content: flex-start;
   gap: clamp(1.5rem, 4vw, 3rem);
   flex-wrap: wrap;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .contact-links a {
-  color: var(--text);
+  color: #fff;
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
@@ -1011,7 +1010,8 @@ h2 {
 }
 
 .contact-links a:hover {
-  color: var(--company-accent);
+  color: #fff;
+  opacity: 0.72;
 }
 
 /* ── Footer ── */
@@ -1693,16 +1693,10 @@ h2 {
     padding: 4rem 0;
   }
 
-  .contact-card h2 {
-    font-size: clamp(3rem, 15vw, 5rem);
-    line-height: 0.96;
-  }
-
   .contact-email {
     width: 100%;
     justify-content: space-between;
     gap: 1rem;
-    font-size: clamp(1.1rem, 5.5vw, 1.4rem);
   }
 
   .contact-links {
