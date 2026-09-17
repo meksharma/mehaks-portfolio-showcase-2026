@@ -952,11 +952,12 @@ h2 {
 
 .contact-card h2 {
   margin-top: clamp(1.5rem, 4vh, 2.75rem);
-  max-width: 36ch;
+  max-width: none;
   color: #fff;
-  font-size: var(--contact-font-size);
-  font-weight: 600;
-  line-height: 1.4;
+  font-size: var(--font-size-slide-title);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
 }
 
 .contact-email {
