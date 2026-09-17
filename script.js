@@ -145,40 +145,6 @@ document.querySelectorAll(".project-video").forEach((player) => {
   });
 });
 
-const philosophy = document.getElementById("approach");
-if (philosophy) {
-  const items = Array.from(philosophy.querySelectorAll(".phil-item"));
-  const mobileQuery = window.matchMedia("(max-width: 760px)");
-  const clamp = (n) => Math.min(1, Math.max(0, n));
-  const easeOut = (t) => 1 - Math.pow(1 - t, 3);
-  const n = items.length;
-  const updatePhilosophy = () => {
-    if (mobileQuery.matches) {
-      const viewportCenter = window.innerHeight / 2;
-      const closestItem = items.reduce((closest, item) => {
-        const rect = item.getBoundingClientRect();
-        const distance = Math.abs(rect.top + rect.height / 2 - viewportCenter);
-        return !closest || distance < closest.distance ? { item, distance } : closest;
-      }, null);
-      items.forEach((item) => item.classList.toggle("is-focused", item === closestItem.item));
-      return;
-    }
-    const rect = philosophy.getBoundingClientRect();
-    const total = rect.height - window.innerHeight;
-    const scrolled = clamp(-rect.top / (total || 1));
-    items.forEach((item, i) => {
-      const span = 1 / (n + 1);
-      const start = i * span;
-      const local = clamp((scrolled - start) / (span * 2));
-      item.style.setProperty("--p", easeOut(local).toFixed(4));
-    });
-  };
-  updatePhilosophy();
-  window.addEventListener("scroll", updatePhilosophy, { passive: true });
-  window.addEventListener("resize", updatePhilosophy);
-}
-
-
 const startPage = () => {
   document.body.classList.add("loaded");
   initReveals();

@@ -825,20 +825,17 @@ h2 {
 
 /* Rotating scroll badge removed */
 
-/* ── Philosophy (sticky staggered) ── */
+/* ── Philosophy ── */
 .philosophy {
   position: relative;
-  height: 180vh;
+  min-height: calc(100svh - 4rem);
 }
 
 .philosophy-sticky {
-  position: sticky;
-  top: 4rem;
-  height: calc(100vh - 4rem);
   display: flex;
-  align-items: flex-start;
-  padding-top: clamp(2rem, 5vh, 3.5rem);
-  overflow: hidden;
+  align-items: center;
+  min-height: calc(100svh - 4rem);
+  padding: clamp(4rem, 9vh, 7rem) 0;
 }
 
 .philosophy-title {
@@ -857,19 +854,42 @@ h2 {
 }
 
 .phil-item {
-  --p: 0;
-  transform: translateY(calc((1 - var(--p)) * var(--i) * 34vh));
-  opacity: calc(0.18 + var(--p) * 0.82 + var(--i) * 0);
-  will-change: transform, opacity;
+  opacity: 0;
+  transform: translate3d(0, 36px, 0);
+  filter: blur(3px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.95s cubic-bezier(0.22, 0.61, 0.36, 1),
+    filter 0.8s ease-out;
+  will-change: opacity, transform, filter;
+}
+
+.philosophy-content.in-view .phil-item {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+}
+
+.philosophy-content.in-view .phil-item:nth-child(1) {
+  transition-delay: 0.12s;
+}
+
+.philosophy-content.in-view .phil-item:nth-child(2) {
+  transition-delay: 0.27s;
+}
+
+.philosophy-content.in-view .phil-item:nth-child(3) {
+  transition-delay: 0.42s;
 }
 
 .phil-num {
   display: block;
-  font-size: clamp(1.1rem, 1.8vw, 1.6rem);
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  font-size: clamp(0.68rem, 0.8vw, 0.78rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.16em;
   color: var(--company-accent);
-  margin-bottom: clamp(1.4rem, 4vh, 2.6rem);
+  margin-bottom: clamp(1.25rem, 3vh, 2rem);
 }
 
 .phil-item h3 {
@@ -901,9 +921,10 @@ h2 {
     transform: none;
   }
 
-  .phil-item {
+  .philosophy-content .phil-item {
     transform: none;
     opacity: 1;
+    filter: none;
   }
 
   .about-photo-color {
@@ -1569,15 +1590,9 @@ h2 {
   }
 
   .phil-item {
-    transform: none;
-    opacity: 0.55;
-    min-height: 15rem;
+    opacity: 0;
+    min-height: 0;
     padding: 1.5rem 0;
-    transition: opacity 0.35s ease;
-  }
-
-  .phil-item.is-focused {
-    opacity: 1;
   }
 
   .phil-item h3 {
