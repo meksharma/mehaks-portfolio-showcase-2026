@@ -2,19 +2,6 @@ const menuToggle = document.getElementById("menu-toggle");
 const siteNav = document.getElementById("site-nav");
 const themeToggle = document.getElementById("theme-toggle");
 const yearNode = document.getElementById("year");
-const aboutMedia = document.querySelector(".about-media");
-
-if (aboutMedia) {
-  const portraitRevealKey = "portfolio-portrait-color-revealed";
-  if (sessionStorage.getItem(portraitRevealKey) === "true") {
-    aboutMedia.classList.add("is-color", "is-session-revealed");
-  } else {
-    aboutMedia.addEventListener("mouseenter", () => {
-      aboutMedia.classList.add("is-color");
-      sessionStorage.setItem(portraitRevealKey, "true");
-    }, { once: true });
-  }
-}
 
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
