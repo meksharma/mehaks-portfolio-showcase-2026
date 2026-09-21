@@ -343,6 +343,10 @@ main,
   place-items: center;
 }
 
+.nav-social-label {
+  display: none;
+}
+
 .header-icon {
   display: block;
   width: 1.05rem;
@@ -372,8 +376,8 @@ main,
   background: transparent;
   border: none;
   color: var(--text);
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2rem;
+  height: 2rem;
   padding: 0;
   cursor: pointer;
   display: inline-flex;
@@ -382,7 +386,7 @@ main,
   border-radius: 999px;
   opacity: 0.78;
   transition: opacity 0.18s ease, background 0.18s ease;
-  margin-left: 2rem;
+  margin-left: 1.15rem;
 }
 
 .theme-toggle:hover {
@@ -2060,10 +2064,18 @@ h2 {
   }
 
   .site-nav .nav-social {
-    display: grid;
+    display: block;
     width: 100%;
-    height: 2.75rem;
-    padding: 0;
+    height: auto;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .site-nav .nav-social .header-icon {
+    display: none;
+  }
+
+  .nav-social-label {
+    display: inline;
   }
 
   .site-nav a:hover,
