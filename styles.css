@@ -194,6 +194,21 @@ main,
   scroll-snap-align: none !important;
 }
 
+@media (hover: none), (pointer: coarse) {
+  html {
+    scroll-snap-type: none;
+  }
+
+  #about,
+  #background,
+  #approach,
+  #builds,
+  #contact,
+  .project-cover {
+    scroll-snap-align: none;
+  }
+}
+
 .section > .container,
 .about-section > .container,
 .site-footer > .container {

@@ -95,6 +95,8 @@ const initReveals = () => {
 };
 
 const initScrollSnap = () => {
+  if (navigator.maxTouchPoints > 0 || window.matchMedia("(pointer: coarse)").matches) return;
+
   const snapPages = Array.from(document.querySelectorAll("#about, #background, #approach, #builds, .project-cover, #contact"));
   if (!snapPages.length) return;
 
