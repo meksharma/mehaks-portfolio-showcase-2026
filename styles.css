@@ -1875,6 +1875,74 @@ h2 {
   border-radius: 18px;
 }
 
+.project-zoom-image {
+  cursor: zoom-in;
+}
+
+.project-zoom-image:focus-visible {
+  outline: 3px solid var(--company-accent);
+  outline-offset: 4px;
+}
+
+body.is-image-viewer-open {
+  overflow: hidden;
+}
+
+.project-image-viewer {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(7, 8, 13, 0.96);
+  color: #fff;
+}
+
+.project-image-viewer::backdrop {
+  background: rgba(7, 8, 13, 0.96);
+}
+
+.project-image-viewer-inner {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: calc(4rem + env(safe-area-inset-top)) calc(1rem + env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom)) calc(1rem + env(safe-area-inset-left));
+  place-items: center;
+}
+
+.project-image-viewer img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.project-image-viewer-close {
+  position: absolute;
+  top: calc(0.75rem + env(safe-area-inset-top));
+  right: calc(0.75rem + env(safe-area-inset-right));
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 50%;
+  background: rgba(17, 20, 31, 0.72);
+  color: #fff;
+  font: 300 2rem/1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+.project-image-viewer-close:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
 .project-mockup.placeholder {
   display: flex;
   align-items: center;

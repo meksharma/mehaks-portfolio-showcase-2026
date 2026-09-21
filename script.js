@@ -184,6 +184,68 @@ document.querySelectorAll(".project-video").forEach((player) => {
   });
 });
 
+const initProjectImageViewer = () => {
+  const images = Array.from(document.querySelectorAll(".project-mockup img"));
+  if (!images.length) return;
+
+  const viewer = document.createElement("dialog");
+  viewer.className = "project-image-viewer";
+  viewer.setAttribute("aria-label", "Project image preview");
+  viewer.innerHTML = `
+    <div class="project-image-viewer-inner">
+      <img alt="">
+      <button class="project-image-viewer-close" type="button" aria-label="Close image preview">&times;</button>
+    </div>
+  `;
+  document.body.appendChild(viewer);
+
+  const viewerImage = viewer.querySelector("img");
+  const closeButton = viewer.querySelector(".project-image-viewer-close");
+  let openingImage = null;
+
+  const openViewer = (image) => {
+    openingImage = image;
+    viewerImage.src = image.currentSrc || image.src;
+    viewerImage.alt = image.alt;
+    viewer.showModal();
+    document.body.classList.add("is-image-viewer-open");
+    closeButton.focus();
+  };
+
+  const closeViewer = () => {
+    if (!viewer.open) return;
+    document.body.classList.remove("is-image-viewer-open");
+    viewer.close();
+  };
+
+  images.forEach((image) => {
+    image.classList.add("project-zoom-image");
+    image.tabIndex = 0;
+    image.setAttribute("role", "button");
+    image.setAttribute("aria-label", `Open full-size image: ${image.alt}`);
+    image.addEventListener("click", () => openViewer(image));
+    image.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      openViewer(image);
+    });
+  });
+
+  closeButton.addEventListener("click", closeViewer);
+  viewer.addEventListener("click", (event) => {
+    if (event.target === viewer) closeViewer();
+  });
+  viewer.addEventListener("cancel", () => {
+    document.body.classList.remove("is-image-viewer-open");
+  });
+  viewer.addEventListener("close", () => {
+    document.body.classList.remove("is-image-viewer-open");
+    viewerImage.removeAttribute("src");
+    openingImage?.focus();
+    openingImage = null;
+  });
+};
+
 const initBuildsReel = () => {
   const section = document.querySelector(".builds-section");
   const track = document.querySelector(".builds-track");
@@ -280,6 +342,7 @@ const startPage = () => {
   document.body.classList.add("loaded");
   initReveals();
   initScrollSnap();
+  initProjectImageViewer();
   initBuildsReel();
 };
 
