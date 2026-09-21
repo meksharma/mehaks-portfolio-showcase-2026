@@ -1489,6 +1489,12 @@ h2 {
   white-space: nowrap;
 }
 
+@media (hover: none), (pointer: coarse) {
+  .cover-title > span {
+    white-space: normal;
+  }
+}
+
 .cover-title-shift {
   margin-top: 0.18em;
   font-weight: inherit;
