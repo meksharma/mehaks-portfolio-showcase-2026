@@ -11,11 +11,11 @@
   --font-sans: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   --font-size-display: 3rem;
   --font-size-slide-title: 3.5rem;
-  --sheen-blue: rgba(96, 132, 248, 0.40);
-  --sheen-violet: rgba(140, 110, 245, 0.45);
-  --sheen-cyan: rgba(90, 190, 250, 0.42);
-  --sheen-yellow: rgba(255, 205, 80, 0.38);
-  --sheen-rose: rgba(122, 121, 247, 0.34);
+  --sheen-blue: rgba(78, 132, 255, 0.44);
+  --sheen-violet: rgba(161, 94, 255, 0.46);
+  --sheen-cyan: rgba(58, 211, 205, 0.42);
+  --sheen-yellow: rgba(255, 199, 73, 0.42);
+  --sheen-rose: rgba(255, 99, 164, 0.42);
   --sheen-white: rgba(255, 255, 255, 0.24);
   --glass-fill: rgba(255, 255, 255, 0.46);
   --glass-fill-strong: rgba(255, 255, 255, 0.62);
@@ -39,11 +39,11 @@
   --brand: #ffffff;
   --brand-strong: #ffffff;
   --company-accent: #9ba6ff;
-  --sheen-blue: rgba(80, 196, 255, 0.50);
-  --sheen-violet: rgba(80, 196, 255, 0.34);
-  --sheen-cyan: rgba(80, 196, 255, 0.50);
-  --sheen-yellow: rgba(255, 200, 70, 0.32);
-  --sheen-rose: rgba(255, 200, 70, 0.24);
+  --sheen-blue: rgba(74, 139, 255, 0.54);
+  --sheen-violet: rgba(165, 91, 255, 0.5);
+  --sheen-cyan: rgba(49, 218, 203, 0.48);
+  --sheen-yellow: rgba(255, 191, 63, 0.46);
+  --sheen-rose: rgba(255, 91, 155, 0.48);
   --sheen-white: rgba(255, 255, 255, 0.06);
   --glass-fill: rgba(20, 24, 38, 0.44);
   --glass-fill-strong: rgba(25, 30, 47, 0.58);
@@ -149,17 +149,17 @@ body::before {
   pointer-events: none;
   background: linear-gradient(115deg,
     transparent 0%,
-    transparent 30%,
-    color-mix(in srgb, rgb(79, 86, 216) 45%, transparent) 38%,
-    color-mix(in srgb, rgb(91, 105, 224) 45%, transparent) 42%,
-    color-mix(in srgb, rgb(105, 125, 235) 45%, transparent) 46%,
-    color-mix(in srgb, rgb(118, 128, 231) 45%, transparent) 50%,
-    color-mix(in srgb, rgb(132, 117, 226) 45%, transparent) 56%,
-    transparent 62%,
+    transparent 27%,
+    color-mix(in srgb, var(--sheen-blue) 72%, transparent) 35%,
+    color-mix(in srgb, var(--sheen-violet) 72%, transparent) 41%,
+    color-mix(in srgb, var(--sheen-rose) 70%, transparent) 47%,
+    color-mix(in srgb, var(--sheen-yellow) 70%, transparent) 53%,
+    color-mix(in srgb, var(--sheen-cyan) 72%, transparent) 59%,
+    transparent 67%,
     transparent 100%
   );
-  opacity: 0.3;
-  filter: blur(30px);
+  opacity: 0.48;
+  filter: blur(34px);
   -webkit-mask-image:
     linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%),
     linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
@@ -168,8 +168,8 @@ body::before {
     linear-gradient(to right, transparent 0%, #000 24%, #000 76%, transparent 100%),
     linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
   mask-composite: intersect;
-  transform: translate3d(-35%, 0, 0);
-  animation: sheenSweep 44s linear infinite;
+  transform: translate3d(-24%, -1.5%, 0);
+  animation: sheenSweep 52s ease-in-out infinite;
   z-index: 0;
 }
 
@@ -218,13 +218,13 @@ main,
 
 @keyframes sheenSweep {
   0% {
-    transform: translate3d(-35%, 0, 0);
+    transform: translate3d(-24%, -1.5%, 0);
   }
   50% {
-    transform: translate3d(35%, 0, 0);
+    transform: translate3d(24%, 2.5%, 0);
   }
   100% {
-    transform: translate3d(-35%, 0, 0);
+    transform: translate3d(-24%, -1.5%, 0);
   }
 }
 
