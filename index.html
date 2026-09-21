@@ -21,7 +21,7 @@
     window.scrollTo(0, 0);
     window.addEventListener("pageshow", () => window.scrollTo(0, 0));
   </script>
-  <link rel="stylesheet" href="styles.css?v=2026091902">
+  <link rel="stylesheet" href="styles.css?v=2026092131">
   <link rel="stylesheet" href="chat.css?v=2026091602">
 </head>
 <body>
@@ -54,20 +54,28 @@
       <nav class="site-nav" id="site-nav" aria-label="Primary">
         <ul>
           <li><a href="#about-text">About</a></li>
+          <li><a href="#builds">Builds</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="https://github.com/meksharma" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li>
+            <a class="nav-social" href="https://github.com/meksharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <img class="header-icon" src="github-header-icon.png" width="256" height="256" alt="">
+            </a>
+          </li>
+          <li>
+            <a class="nav-social" href="https://www.linkedin.com/in/meksharma/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <img class="header-icon" src="linkedin-header-icon.png" width="256" height="256" alt="">
+            </a>
+          </li>
         </ul>
       </nav>
 
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme">
-        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"/>
+        <svg class="icon-sun header-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" fill="currentColor"/>
           <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
         </svg>
-        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
+        <img class="icon-moon header-icon" src="moon-header-icon.png?v=2026092125" width="256" height="256" alt="">
       </button>
     </div>
   </header>
@@ -142,27 +150,91 @@
       </div>
     </section>
 
-    <section class="philosophy" id="approach">
-      <div class="philosophy-sticky">
-        <div class="container philosophy-content reveal">
-          <p class="philosophy-title">How I work</p>
-          <div class="philosophy-grid">
-            <article class="phil-item">
-              <span class="phil-num">01</span>
-              <h3>Think in systems, not screens</h3>
-              <p>The most important design decisions happen before anything goes into Figma. I push back on assumptions, reframe problems, and make sure the team is solving the right thing before we spend time solving it well.</p>
-            </article>
-            <article class="phil-item">
-              <span class="phil-num">02</span>
-              <h3>Make the vision tangible</h3>
-              <p>Vibe coding is an integral part of my design toolkit. Showing stakeholders something real, connected to live data, moves alignment faster than any presentation deck. And in the world of AI, there's no better way to prove a direction works than to build it.</p>
-            </article>
-            <article class="phil-item">
-              <span class="phil-num">03</span>
-              <h3>Accountability doesn't end at handoff</h3>
-              <p>I don't consider a feature done when the specs are delivered. I stay in the work through engineering, track usage after launch, and iterate until the experience actually performs the way it was designed to.</p>
-            </article>
+    <section class="builds-section" id="builds" aria-labelledby="builds-title">
+      <div class="builds-sticky">
+        <div class="container builds-header reveal">
+          <div class="builds-intro">
+            <h2 id="builds-title">Building with AI</h2>
+            <p class="builds-intro-copy">
+              I learn by building. Over the past year, I've been using AI to push beyond traditional
+              product design, experimenting with prompts, AI-native experiences, and code-ready prototypes.
+              It's changed how I work, helping me move faster from
+              <span class="builds-intro-accent">idea &rarr; experiment &rarr; working experience</span>, while developing a deeper
+              understanding of what it means to design with AI.
+            </p>
           </div>
+          <div class="builds-controls" aria-label="Browse projects">
+            <button class="builds-control" type="button" data-builds-direction="previous" aria-label="Previous project">
+              <span aria-hidden="true">←</span>
+            </button>
+            <button class="builds-control" type="button" data-builds-direction="next" aria-label="Next project">
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="builds-track reveal" tabindex="0" aria-label="Vibe-coded projects">
+          <article class="build-card">
+          <div class="build-card-media">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="SwiftUI interface prototype running in the iOS simulator">
+              <source src="swiftui-vibe-coding-preview.mp4" type="video/mp4">
+            </video>
+            <button class="build-video-toggle" type="button" aria-label="Pause video preview">
+              <svg class="build-video-pause" viewBox="0 0 16 16" aria-hidden="true">
+                <rect x="3" y="2" width="4" height="12" rx="1"></rect>
+                <rect x="9" y="2" width="4" height="12" rx="1"></rect>
+              </svg>
+              <span class="build-video-play" aria-hidden="true">▶</span>
+            </button>
+          </div>
+          <div class="build-card-content">
+            <div class="build-card-meta">
+              <span>Microsoft</span>
+              <span>2026</span>
+            </div>
+            <p class="build-card-status">AI-powered prototyping</p>
+            <h3>Designing directly in SwiftUI</h3>
+            <p class="build-card-description">
+              Built production-like SwiftUI prototypes in VS Code and Xcode using real design tokens,
+              typography, spacing, states, animations, and transitions. Testing directly in the simulator
+              helped the team experiment cheaply, align faster, and preserve design intent.
+            </p>
+            <a class="build-card-link" href="https://lnkd.in/p/eXb_E6DF" target="_blank" rel="noopener noreferrer">
+              View project <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          </article>
+
+          <article class="build-card">
+          <div class="build-card-media build-card-media-landscape">
+            <video autoplay muted loop playsinline preload="metadata" aria-label="Second brain dashboard summarizing work priorities and actions">
+              <source src="second-brain-preview.mp4" type="video/mp4">
+            </video>
+            <button class="build-video-toggle" type="button" aria-label="Pause video preview">
+              <svg class="build-video-pause" viewBox="0 0 16 16" aria-hidden="true">
+                <rect x="3" y="2" width="4" height="12" rx="1"></rect>
+                <rect x="9" y="2" width="4" height="12" rx="1"></rect>
+              </svg>
+              <span class="build-video-play" aria-hidden="true">▶</span>
+            </button>
+          </div>
+          <div class="build-card-content">
+            <div class="build-card-meta">
+              <span>Microsoft</span>
+              <span>2026</span>
+            </div>
+            <p class="build-card-status">Microsoft Graph experiment</p>
+            <h3>A second brain for work</h3>
+            <p class="build-card-description">
+              Built a focused command center that pulls from my inbox, calendar, meetings, and tasks,
+              then reduces the noise into what changed, what matters, and what needs action. Vibe coded
+              with Claude Opus, HTML, JavaScript, and Microsoft Graph APIs.
+            </p>
+            <a class="build-card-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7444332393907531777/" target="_blank" rel="noopener noreferrer">
+              View project <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -201,7 +273,7 @@
                 <p class="overview-release">Market: Global &nbsp;|&nbsp; Platform: Mobile (iOS, Android) and iPad &nbsp;|&nbsp; Release: 2024-Present</p>
                 <figure class="project-mockup reveal">
                   <img
-                    src="Hero image 1.png"
+                    src="Agoda and search/Hero image 1.png"
                     width="1920"
                     height="1080"
                     loading="lazy"
@@ -291,11 +363,11 @@
 
           <figure class="project-mockup project-clickthrough reveal">
             <img
-              src="Project 1 Point 0202-22.png"
+              src="Agoda and search/Project 1 Image 2.png?v=202609211401"
               width="1920"
               height="1080"
               loading="lazy"
-              alt="Outlook on-canvas summary experience showing AI assistance within the reading flow"
+              alt="Outlook summary experience shown within the reading flow on mobile and iPad"
             >
           </figure>
 
@@ -323,11 +395,20 @@
             <div class="overview-body project-role-body">
               <p class="overview-desc">
                 Search was an underused capability on Teams Mobile, despite being available to
-                <strong>14.5M users, or 23% of Teams Mobile WAU</strong>. The opportunity was to make
+                <span class="project-section-accent">14.5M users, or 23% of Teams Mobile WAU</span>. The opportunity was to make
                 Search easier to understand and use, helping people discover that they could find
                 more than just people, including <strong>messages, chats, meetings and files</strong>,
                 while reducing abandonment.
               </p>
+              <figure class="project-mockup reveal">
+                <img
+                  src="Agoda and search/Hero Image 2.png?v=202609211328"
+                  width="1920"
+                  height="1080"
+                  loading="lazy"
+                  alt="Teams Mobile Search showing people, chats, files, and recent searches"
+                >
+              </figure>
             </div>
           </div>
 
@@ -336,15 +417,15 @@
             <div class="overview-body project-role-body">
               <p class="overview-desc">
                 As the Product Designer for Teams Mobile Search, I was responsible for improving
-                the search journey across <strong>iOS and Android</strong>, from helping users
+                the search journey across iOS and Android, from helping users
                 understand what they could search for to helping them formulate better queries.
               </p>
               <p class="overview-desc">
-                I used <strong>customer research, behavioural data and experimentation</strong> to
-                identify key drop-off points, then redesigned the <strong>Zero Input and Autosuggest
-                experiences</strong>. The work shipped across Teams Mobile and delivered up to
-                <strong>7.77% lower abandonment</strong>, <strong>1.27% higher Search Success Rate</strong>
-                and <strong>3.83% higher CCR</strong>.
+                I used customer research, behavioural data and experimentation to
+                identify key drop-off points, then redesigned the Zero Input and Autosuggest
+                experiences. The work shipped across Teams Mobile and delivered up to
+                <span class="project-section-accent">7.77% lower abandonment</span>, <span class="project-section-accent">1.27% higher Search Success Rate</span>
+                and <span class="project-section-accent">3.83% higher CCR</span>.
               </p>
               <p class="overview-desc">Here are a few ways I brought that strategy to life:</p>
             </div>
@@ -378,7 +459,7 @@
                 <figure class="project-mockup reveal">
                   <div class="project-video">
                     <video autoplay muted playsinline preload="metadata" aria-label="Teams Mobile query formulation search experience">
-                      <source src="Project 2 QF flow.mp4" type="video/mp4">
+                      <source src="Proeject 2 QF flow.mp4" type="video/mp4">
                     </video>
                     <button class="video-replay" type="button" aria-label="Replay video" title="Replay video" hidden>
                       <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -428,11 +509,11 @@
                 <p class="overview-release">Market: Global &nbsp;|&nbsp; Platform: App and web &nbsp;|&nbsp; Release: 2021</p>
                 <figure class="project-mockup reveal">
                   <img
-                    src="Agoda Loyalty Hero Image.png"
+                    src="Agoda and search/Hero Image 3.png"
                     width="1920"
                     height="1080"
                     loading="lazy"
-                    alt="Three Agoda mobile screens showing VIP status on the homepage, VIP deals in search results, and Platinum benefits on a property page"
+                    alt="Agoda Loyalty experience across the homepage, search results, and booking confirmation"
                   >
                 </figure>
               </section>
@@ -440,7 +521,7 @@
               <section class="project-summary-block">
                 <p class="project-summary-label">My role</p>
                 <p class="overview-desc">
-                  As Lead Product Designer, I led <strong>2 junior designers</strong>, defined the
+                  As Lead Product Designer, I led 2 junior designers, defined the
                   North Star and MVP roadmap, and partnered with Product, Research, Marketing, and
                   Engineering from discovery through experimentation.
                 </p>
@@ -449,10 +530,10 @@
               <section class="project-summary-block">
                 <p class="project-summary-label">Impact</p>
                 <p class="overview-desc project-impact">
-                  The redesign contributed approximately <strong>60K monthly bookings in Q4
-                  2021</strong>. Key experiments delivered <strong>+2.38% net bookings and 4K
-                  additional monthly bookings</strong>, while the personalized homepage generated
-                  <strong>+0.81% net bookings and 1K additional monthly bookings</strong>.
+                  The redesign contributed approximately <span class="project-section-accent">60K monthly bookings in Q4
+                  2021</span>. Key experiments delivered <span class="project-section-accent">+2.38% net bookings and 4K
+                  additional monthly bookings</span>, while the personalized homepage generated
+                  <span class="project-section-accent">+0.81% net bookings and 1K additional monthly bookings</span>.
                 </p>
               </section>
             </div>
@@ -471,6 +552,19 @@
                 <h3 class="project-detail-title">Benefits across the journey</h3>
                 <p class="overview-desc">Integrated VIP messaging into home, search, property, booking, and post-booking experiences.</p>
               </article>
+              <figure class="project-mockup project-evolution-media reveal">
+                <div class="project-video">
+                  <video autoplay muted playsinline preload="metadata" aria-label="Agoda VIP experience flow details">
+                    <source src="Project 3 Flow details.mp4" type="video/mp4">
+                  </video>
+                  <button class="video-replay" type="button" aria-label="Replay video" title="Replay video" hidden>
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 12a9 9 0 1 1-2.64-6.36L21 8"></path>
+                      <path d="M21 3v5h-5"></path>
+                    </svg>
+                  </button>
+                </div>
+              </figure>
               <article class="project-evolution-item">
                 <p class="project-evolution-number">03</p>
                 <h3 class="project-detail-title">Better decision support</h3>
@@ -536,6 +630,31 @@
       </div>
     </section>
 
+    <section class="philosophy" id="approach">
+      <div class="philosophy-sticky">
+        <div class="container philosophy-content reveal">
+          <p class="philosophy-title">How I work</p>
+          <div class="philosophy-grid">
+            <article class="phil-item">
+              <span class="phil-num">01</span>
+              <h3>Think in systems, not screens</h3>
+              <p>The most important design decisions happen before anything goes into Figma. I push back on assumptions, reframe problems, and make sure the team is solving the right thing before we spend time solving it well.</p>
+            </article>
+            <article class="phil-item">
+              <span class="phil-num">02</span>
+              <h3>Make the vision tangible</h3>
+              <p>Vibe coding is an integral part of my design toolkit. Showing stakeholders something real, connected to live data, moves alignment faster than any presentation deck. And in the world of AI, there's no better way to prove a direction works than to build it.</p>
+            </article>
+            <article class="phil-item">
+              <span class="phil-num">03</span>
+              <h3>Accountability doesn't end at handoff</h3>
+              <p>I don't consider a feature done when the specs are delivered. I stay in the work through engineering, track usage after launch, and iterate until the experience actually performs the way it was designed to.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section alt" id="contact">
       <div class="container contact-card reveal">
         <h2>Open to Staff/Lead roles shaping AI product strategy.</h2>
@@ -545,9 +664,15 @@
           <span class="contact-email-arrow" aria-hidden="true">↗</span>
         </a>
         <div class="contact-links">
-          <a href="Mehak-Sharma-CV.pdf" target="_blank" rel="noopener noreferrer">CV <span aria-hidden="true">↗</span></a>
-          <a href="https://www.linkedin.com/in/meksharma/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/meksharma" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a class="contact-cv" href="Mehak-Sharma-CV.pdf" target="_blank" rel="noopener noreferrer">
+            CV <span aria-hidden="true">↗</span>
+          </a>
+          <a class="contact-social" href="https://www.linkedin.com/in/meksharma/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img class="header-icon" src="linkedin-header-icon.png" width="256" height="256" alt="">
+          </a>
+          <a class="contact-social" href="https://github.com/meksharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img class="header-icon" src="github-header-icon.png" width="256" height="256" alt="">
+          </a>
         </div>
       </div>
       <footer class="site-footer">
@@ -558,7 +683,7 @@
     </section>
   </main>
 
-  <script src="script.js?v=2026091704"></script>
+  <script src="script.js?v=2026092109"></script>
   <script src="chat.js?v=2026090703"></script>
 </body>
 </html>

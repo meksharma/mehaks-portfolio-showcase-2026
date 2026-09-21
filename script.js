@@ -95,7 +95,7 @@ const initReveals = () => {
 };
 
 const initScrollSnap = () => {
-  const snapPages = Array.from(document.querySelectorAll("#about, #background, #approach, .project-cover, #contact"));
+  const snapPages = Array.from(document.querySelectorAll("#about, #background, #approach, #builds, .project-cover, #contact"));
   if (!snapPages.length) return;
 
   let currentPage = snapPages.reduce((closest, page) => {
@@ -182,10 +182,103 @@ document.querySelectorAll(".project-video").forEach((player) => {
   });
 });
 
+const initBuildsReel = () => {
+  const section = document.querySelector(".builds-section");
+  const track = document.querySelector(".builds-track");
+  const cards = track ? Array.from(track.querySelectorAll(".build-card")) : [];
+  const previousButton = document.querySelector('[data-builds-direction="previous"]');
+  const nextButton = document.querySelector('[data-builds-direction="next"]');
+  if (!section || !track || !cards.length || !previousButton || !nextButton) return;
+
+  if (cards.length === 1) {
+    previousButton.parentElement.hidden = true;
+  }
+
+  track.querySelectorAll(".build-card-media").forEach((media) => {
+    const video = media.querySelector("video");
+    const toggle = media.querySelector(".build-video-toggle");
+    if (!video || !toggle) return;
+
+    const syncToggle = () => {
+      toggle.setAttribute("aria-label", video.paused ? "Play video preview" : "Pause video preview");
+    };
+
+    toggle.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+    video.addEventListener("play", syncToggle);
+    video.addEventListener("pause", syncToggle);
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      video.pause();
+    }
+    syncToggle();
+  });
+
+  const getActiveIndex = () => cards.reduce((closestIndex, card, index) => {
+    const currentDistance = Math.abs(card.offsetLeft - track.scrollLeft);
+    const closestDistance = Math.abs(cards[closestIndex].offsetLeft - track.scrollLeft);
+    return currentDistance < closestDistance ? index : closestIndex;
+  }, 0);
+
+  const updateControls = () => {
+    const activeIndex = getActiveIndex();
+    previousButton.disabled = activeIndex === 0;
+    nextButton.disabled = activeIndex === cards.length - 1;
+  };
+
+  const moveToCard = (offset) => {
+    const targetIndex = Math.min(cards.length - 1, Math.max(0, getActiveIndex() + offset));
+    const targetLeft = targetIndex === 0
+      ? 0
+      : Math.min(cards[targetIndex].offsetLeft, track.scrollWidth - track.clientWidth);
+    track.scrollTo({ left: targetLeft, behavior: "auto" });
+    updateControls();
+  };
+
+  previousButton.addEventListener("click", () => moveToCard(-1));
+  nextButton.addEventListener("click", () => moveToCard(1));
+  track.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+    event.preventDefault();
+    moveToCard(event.key === "ArrowLeft" ? -1 : 1);
+  });
+  track.addEventListener("scroll", updateControls, { passive: true });
+
+  let scrollFrame = null;
+  const syncTrackToPage = () => {
+    scrollFrame = null;
+    if (window.innerWidth <= 760 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const scrollRange = section.offsetHeight - window.innerHeight;
+    if (scrollRange <= 0) return;
+    const progress = Math.min(1, Math.max(0, (window.scrollY - section.offsetTop) / scrollRange));
+    const lastCardLeft = Math.min(cards[cards.length - 1].offsetLeft, track.scrollWidth - track.clientWidth);
+    track.scrollLeft = lastCardLeft * progress;
+    updateControls();
+  };
+
+  const requestTrackSync = () => {
+    if (scrollFrame === null) {
+      scrollFrame = window.requestAnimationFrame(syncTrackToPage);
+    }
+  };
+
+  window.addEventListener("scroll", requestTrackSync, { passive: true });
+  window.addEventListener("resize", requestTrackSync);
+  syncTrackToPage();
+  updateControls();
+};
+
 const startPage = () => {
   document.body.classList.add("loaded");
   initReveals();
   initScrollSnap();
+  initBuildsReel();
 };
 
 if (document.readyState === "loading") {
