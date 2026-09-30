@@ -3,7 +3,7 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.m
 document.querySelectorAll("[data-demo-phone-3d]").forEach((host) => {
   const video = host.querySelector("[data-demo-video]");
   const videoToggle = host.querySelector("[data-demo-video-toggle]");
-  const isZoomOutModel = host.dataset.demoPhone3d === "zoom-out";
+  const isZoomOutModel = host.getAttribute("data-demo-phone-3d") === "zoom-out";
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
@@ -208,14 +208,21 @@ document.querySelectorAll("[data-demo-phone-3d]").forEach((host) => {
     hoverCurrent = THREE.MathUtils.lerp(hoverCurrent, hoverTarget, 0.06);
     drawVideoFrame();
 
-    const targetX = THREE.MathUtils.lerp(-0.055, -pointerCurrent.y, hoverCurrent);
-    const targetY = THREE.MathUtils.lerp(-0.3, pointerCurrent.x, hoverCurrent);
-    const targetZ = THREE.MathUtils.lerp(-0.025, pointerCurrent.x * 0.06, hoverCurrent);
-    phone.rotation.x = THREE.MathUtils.lerp(-0.16, targetX, entrance);
-    phone.rotation.y = THREE.MathUtils.lerp(-0.82, targetY, entrance);
-    phone.rotation.z = THREE.MathUtils.lerp(-0.05, targetZ, entrance);
+    const targetX = isZoomOutModel
+      ? 0
+      : THREE.MathUtils.lerp(-0.055, -pointerCurrent.y, hoverCurrent);
+    const targetY = isZoomOutModel
+      ? 0
+      : THREE.MathUtils.lerp(-0.3, pointerCurrent.x, hoverCurrent);
+    const targetZ = isZoomOutModel
+      ? 0
+      : THREE.MathUtils.lerp(-0.025, pointerCurrent.x * 0.06, hoverCurrent);
+    phone.rotation.x = THREE.MathUtils.lerp(isZoomOutModel ? 0 : -0.16, targetX, entrance);
+    phone.rotation.y = THREE.MathUtils.lerp(isZoomOutModel ? 0 : -0.82, targetY, entrance);
+    phone.rotation.z = THREE.MathUtils.lerp(isZoomOutModel ? 0 : -0.05, targetZ, entrance);
     const entranceY = isZoomOutModel ? -3.4 : -0.22;
-    phone.position.y = THREE.MathUtils.lerp(entranceY, 0, entrance);
+    const settledY = isZoomOutModel ? -0.35 : 0;
+    phone.position.y = THREE.MathUtils.lerp(entranceY, settledY, entrance);
     const responsiveScale = host.clientWidth < 600 ? 0.88 : 1;
     const entranceScale = isZoomOutModel ? responsiveScale * 1.42 : responsiveScale * 0.94;
     const settledScale = isZoomOutModel ? responsiveScale * 1.08 : responsiveScale;
@@ -232,7 +239,7 @@ document.querySelectorAll("[data-demo-phone-3d]").forEach((host) => {
   const observerThreshold = isZoomOutModel ? 0.8 : 0;
   const applyZoomOutStartPose = () => {
     const responsiveScale = host.clientWidth < 600 ? 0.88 : 1;
-    phone.rotation.set(-0.16, -0.82, -0.05);
+    phone.rotation.set(0, 0, 0);
     phone.position.y = -3.4;
     phone.scale.setScalar(responsiveScale * 1.42);
     if (!frameId) {
