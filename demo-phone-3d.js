@@ -193,7 +193,7 @@ document.querySelectorAll("[data-demo-phone-3d]").forEach((host) => {
   const render = (time) => {
     const elapsed = enteredAt ? time - enteredAt : 0;
     const entranceDelay = isZoomOutModel ? 700 : 0;
-    const entranceDuration = isZoomOutModel ? 3000 : 1250;
+    const entranceDuration = isZoomOutModel ? 1800 : 1250;
     const entranceProgress = THREE.MathUtils.clamp(
       (elapsed - entranceDelay) / entranceDuration,
       0,
