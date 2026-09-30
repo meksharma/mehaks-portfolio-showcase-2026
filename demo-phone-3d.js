@@ -220,11 +220,11 @@ document.querySelectorAll("[data-demo-phone-3d]").forEach((host) => {
     phone.rotation.x = THREE.MathUtils.lerp(isZoomOutModel ? 0 : -0.16, targetX, entrance);
     phone.rotation.y = THREE.MathUtils.lerp(isZoomOutModel ? 0 : -0.82, targetY, entrance);
     phone.rotation.z = THREE.MathUtils.lerp(isZoomOutModel ? 0 : -0.05, targetZ, entrance);
-    const entranceY = isZoomOutModel ? -3.4 : -0.22;
+    const entranceY = isZoomOutModel ? -1.65 : -0.22;
     const settledY = isZoomOutModel ? -0.35 : 0;
     phone.position.y = THREE.MathUtils.lerp(entranceY, settledY, entrance);
     const responsiveScale = host.clientWidth < 600 ? 0.88 : 1;
-    const entranceScale = isZoomOutModel ? responsiveScale * 1.42 : responsiveScale * 0.94;
+    const entranceScale = isZoomOutModel ? responsiveScale * 1.24 : responsiveScale * 0.94;
     const settledScale = isZoomOutModel ? responsiveScale * 1.08 : responsiveScale;
     phone.scale.setScalar(THREE.MathUtils.lerp(entranceScale, settledScale, entrance));
 
@@ -240,8 +240,8 @@ document.querySelectorAll("[data-demo-phone-3d]").forEach((host) => {
   const applyZoomOutStartPose = () => {
     const responsiveScale = host.clientWidth < 600 ? 0.88 : 1;
     phone.rotation.set(0, 0, 0);
-    phone.position.y = -3.4;
-    phone.scale.setScalar(responsiveScale * 1.42);
+    phone.position.y = -1.65;
+    phone.scale.setScalar(responsiveScale * 1.24);
     if (!frameId) {
       drawVideoFrame();
       renderer.render(scene, camera);
